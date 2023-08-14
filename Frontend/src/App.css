@@ -1,0 +1,91 @@
+:root {
+  --c-background: #363d3d;
+  --c-secondarybg: #333;
+  --c-primary: #e0cba8;
+  --c-secondary: #f8f8f8;
+  --c-action: #88498f;
+  --c-transparent: rgba(255, 255, 255, 0);
+}
+
+.LevelLayout {
+  height: 98vh;
+  width: 98vw;
+  margin: auto
+}
+
+.form {
+  height: 49%;
+  color: var(--c-secondarybg);
+  margin-bottom: 16px;
+}
+
+.QueryHeader {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.FieldLabel {
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: 18;
+  line-height: 20px;
+}
+
+.ExecuteButton {
+  align-items: flex-start;
+  appearance: button;
+  background-color: var(--c-action);
+  border: none;
+  border-radius: 20px;
+  color: var(--c-secondary);
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  height: 24px;
+  line-height: 20px;
+  margin-left: auto;
+  padding: 0px 16px;
+  text-align: center;
+}
+
+#SQLQueryField {
+  background-color: var(--c-transparent);
+  border-color: var(--c-primary);
+  border-radius: 8px;
+  border-width: 1px;
+  color: var(--c-secondary);
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  height: 90%;
+  width: 97vw;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px;
+}
+
+.ResultDisplay {
+  height: 49%;
+}
+
+.DisplayLabel {
+  color: var(--c-primary);
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.Result {
+  background-color: var(--c-secondarybg);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px inset;
+  color: var(--c-secondary);
+  display: block;
+  font-size: 14px;
+  height: 90%;
+  padding: 8px;
+}
