@@ -13,10 +13,8 @@ I'll explain how to open your terminal on Mac, windows, and in VS Code for clari
 ### Mac Terminal
 
 In mac, press the Spotlight Search button (F4, Search Icon), and type in "Terminal". From here, navigate to the location you have stored your project.
-I've added mine to the documents folder, so i'll type:
-'''
-cd documents/sqlgame
-'''
+I've added mine to the documents folder, so i'll type `cd documents/sqlgame`
+
 
 ### Windows CMD
 
@@ -29,10 +27,7 @@ Inside VS Code, navigate to the "Terminal" section and select "New Terminal". Th
 ## Composing the Docker
 
 After you've opened the terminal, you'll want to actually start the game. Instead of running a .exe containing all the viruses I could find, I'll let you execute
-'''
-docker compose up -d
-'''
-in the terminal. This will start doing a whole bunch of things, basically installing the game!
+`docker compose up -d` in the terminal. This will start doing a whole bunch of things, basically installing the game!
 
 ## Start playing!!
 
