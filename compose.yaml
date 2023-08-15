@@ -1,16 +1,16 @@
 services:
   app:
-    container_name: SQLGame
+    container_name: Frontend
     build:
-      context: ./sqlgame
+      context: ./Frontend
     environment:
       NODE_ENV: production
     # command: serve -s build
     ports:
       - 8228:3000
     volumes:
-      - ".:/sqlgame/"
-      - /sqlgame/node_modules
+      - ".:/Frontend/"
+      - /Frontend/node_modules
 
   # mongo_db:
   #   container_name: Code
@@ -21,15 +21,6 @@ services:
   #     - 27017:27017
 
   sqldb:
-    container_name: SQLdb
-    build:
-      context: ./sqldb
-    environment:
-      ACCEPT_EULA: "1"
-      MSSQL_SA_PASSWORD: SQLDevPwd01!
-      MSSQL_PID: Developer
-    image: mcr.microsoft.com/azure-sql-edge:latest
+    build: ./SQL
     ports:
-      - 1433:1433
-    volumes:
-      - ".:/sqldb/"
+        - 1433:1433
