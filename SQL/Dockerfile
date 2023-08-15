@@ -18,6 +18,3 @@ EXPOSE 1433
 
 # Run Microsoft SQL Server and initialization script (at the same time)
 CMD /bin/bash ./entrypoint.sh
-
-# run initial scripts
-RUN ( /opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" && ( echo "SQLServer started" && sleep 10s ) || ( echo "SQLSERVER failed to start" && exit )/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'SQLDevPwd01' -i /opt/mssql-scripts/MonsterDB.sql
