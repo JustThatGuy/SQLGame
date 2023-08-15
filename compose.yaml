@@ -21,6 +21,7 @@ services:
   #     - 27017:27017
 
   sqldb:
+    container_name: Database
     build: ./SQL
     ports:
         - 1433:1433

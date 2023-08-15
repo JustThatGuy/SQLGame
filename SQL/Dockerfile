@@ -1,8 +1,11 @@
 # Start your image with a mssql base image
 FROM mcr.microsoft.com/azure-sql-edge:latest
 
+WORKDIR /usr/src/db
+
+COPY . /usr/src/db
 # create directory within SQL container for database files
-RUN mkdir -p /opt/mssql-scripts
+# RUN mkdir -p /opt/mssql-scripts
 
 # copy the database files from host to container
 COPY MonsterDB.sql /opt/mssql-scripts
