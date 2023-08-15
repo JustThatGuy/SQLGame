@@ -1,3 +1,6 @@
+volumes:
+  sqlserver_data:
+
 services:
   app:
     container_name: Frontend
@@ -20,8 +23,40 @@ services:
   #   ports:
   #     - 27017:27017
 
-  sqldb:
+  # sqldb:
+  #   container_name: Database
+  #   build: ./SQL
+  #   ports:
+  #       - 1433:1433
+
+  sqlserver:
     container_name: Database
-    build: ./SQL
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      - ACCEPT_EULA="1"
+      - SA_PASSWORD=SQLDevPwd01!
+      - MSSQL_PID=Developer
     ports:
-        - 1433:1433
+      - 1433:1433
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P SQLDevPwd01! -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 10
+      start_period: 10s
+      timeout: 3s
+  sqlserver.configurator:
+    container_name: DatabaseConfig
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    volumes:
+      - ./SQL:/docker-entrypoint-initdb.d
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    command: >
+      bash -c '
+      /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P SQLDevPwd01! -d master -i docker-entrypoint-initdb.d/MonsterDB.sql;
+      echo "All done!";
+      '

@@ -6,7 +6,7 @@ ENV NODE_ENV production
 # The /app directory should act as the main application directory
 WORKDIR /usr/app/src
 
-# Copy the app package and package-lock.json file
+# Copy the app package file
 COPY package*.json ./
 
 # Copy local directories to the current local directory of our docker image (/app)

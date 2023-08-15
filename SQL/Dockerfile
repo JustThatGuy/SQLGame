@@ -8,7 +8,7 @@ COPY . /usr/src/db
 # RUN mkdir -p /opt/mssql-scripts
 
 # copy the database files from host to container
-COPY MonsterDB.sql /opt/mssql-scripts
+COPY ./MonsterDB.sql /opt/mssql-scripts
 
 # set environment variables
 ENV MSSQL_SA_PASSWORD SQLDevPwd01!
