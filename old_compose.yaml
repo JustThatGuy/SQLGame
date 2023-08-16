@@ -24,13 +24,6 @@ services:
   #   ports:
   #     - 27017:27017
 
-
-  # sqldb:
-  #   container_name: Database
-  #   build: ./SQL
-  #   ports:
-  #       - 1433:1433
-
   sqlserver:
     container_name: Database
     image: mcr.microsoft.com/azure-sql-edge:latest
@@ -49,6 +42,7 @@ services:
       retries: 10
       start_period: 10s
       timeout: 3s
+
   sqlserver.configurator:
     container_name: DatabaseConfig
     image: mcr.microsoft.com/azure-sql-edge:latest

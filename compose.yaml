@@ -15,11 +15,56 @@ services:
     volumes:
       - ".:/Frontend/"
       - /Frontend/node_modules
+    networks:
+      - public
+    depends_on:
+      - backend
   
+  # Build the API server
   server:
     container_name: Backend
-    build: ./Backend
+    # Based on the Backend folder
+    build:
+      args:
+      - NODE_ENV=development
+      context: ./Backend
+      target: development
+    command: npm run start-watch
     environment:
-      - NODE_ENV: production
-    
+      - DATABASE_DB=example
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=/run/secrets/db-password
+      - DATABASE_HOST=db
+      - NODE_ENV=development
+    ports:
+      - 80:80
+      - 9229:9229
+      - 9230:9230
+    secrets:
+      - db-password
+    volumes:
+      - ./Backend/src:/code/src:ro
+      - ./Backend/package.json:/code/package.json
+      - ./Backend/package-lock.json:/code/package-lock.json
+      - back-notused:/opt/app/node_modules
+    networks:
+      - public
+      - private
+    depends_on:
+      - db
+  
+  # Set up PostgresSQL database
   database:
+    container_name: PostgresSQL
+    # Alpine based image for low memory usage
+    image: postgres:12-alpine
+    restart: always
+    # Bunch of config stuff
+    environment:
+      - POSTGRES_PASSWORD=SQLDevPwd01!
+    networks:
+      - server-side
+    ports:
+      - 5432:5432
+    volumes:
+      - ./SQL:/var/lib/postgresql/data
