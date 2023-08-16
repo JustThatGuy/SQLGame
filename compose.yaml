@@ -1,62 +1,25 @@
-volumes:
-  sqlserver_data:
-
 services:
+  # Start the frontend application
   app:
     container_name: Frontend
+    # Copy the Frontend folder into app
     build:
       context: ./Frontend
+    # Environment variable just in case.
     environment:
       NODE_ENV: production
-    # command: serve -s build
+    # Open localhost ports
     ports:
       - 8228:3000
+    # Copy volumes for file retention.
     volumes:
       - ".:/Frontend/"
       - /Frontend/node_modules
-
-  # mongo_db:
-  #   container_name: Code
-  #   image: "mongo"
-  #   volumes:
-  #     - mongo_db:/data/db
-  #   ports:
-  #     - 27017:27017
-
-  # sqldb:
-  #   container_name: Database
-  #   build: ./SQL
-  #   ports:
-  #       - 1433:1433
-
-  sqlserver:
-    container_name: Database
-    image: mcr.microsoft.com/azure-sql-edge:latest
+  
+  server:
+    container_name: Backend
+    build: ./Backend
     environment:
-      - ACCEPT_EULA="1"
-      - SA_PASSWORD=SQLDevPwd01!
-      - MSSQL_PID=Developer
-    ports:
-      - 1433:1433
-    volumes:
-      - sqlserver_data:/var/opt/mssql
-    restart: always
-    healthcheck:
-      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P SQLDevPwd01! -Q 'SELECT 1' || exit 1"]
-      interval: 10s
-      retries: 10
-      start_period: 10s
-      timeout: 3s
-  sqlserver.configurator:
-    container_name: DatabaseConfig
-    image: mcr.microsoft.com/azure-sql-edge:latest
-    volumes:
-      - ./SQL:/docker-entrypoint-initdb.d
-    depends_on:
-      sqlserver:
-        condition: service_healthy
-    command: >
-      bash -c '
-      /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P SQLDevPwd01! -d master -i docker-entrypoint-initdb.d/MonsterDB.sql;
-      echo "All done!";
-      '
+      - NODE_ENV: production
+    
+  database:
