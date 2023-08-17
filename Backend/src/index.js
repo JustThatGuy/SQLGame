@@ -7,10 +7,6 @@ const PORT = process.env.PORT || 8080;
 
 const database = require('./database')
 
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
-
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json

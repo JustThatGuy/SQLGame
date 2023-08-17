@@ -10,7 +10,7 @@ services:
       NODE_ENV: production
     # Open localhost ports
     ports:
-      - 8228:3000
+      - 3000:3000
     # Copy volumes for file retention.
     volumes:
       - ".:/Frontend/"
@@ -38,8 +38,8 @@ services:
       - NODE_ENV=development
     ports:
       - 8080:8080
-      - 9229:9229
-      - 9230:9230
+      - 3000:3000
+      - 5432:5432
     secrets:
       - db-password
     volumes:

@@ -4,7 +4,7 @@ const pool = new Pool({
   host: 'localhost',
   database: 'Monster',
   password: 'SQLDevPwd01!',
-  port: 9229
+  port: 5432,
 });
 
 const getQuest = () => {
@@ -32,5 +32,5 @@ const sqlQuery = (body) => {
   
 module.exports = {
   getQuest,
-  sqlQuery,
+  sqlQuery
 }
