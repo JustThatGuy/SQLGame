@@ -1,17 +1,15 @@
 # Start your image with a node base image
-FROM node:20-alpine
+FROM node:lts
 
-ENV NODE_ENV production
-
-# The /app directory should act as the main application directory
-WORKDIR /usr/app/src
+# The /src directory should act as the main application directory
+WORKDIR /src
 
 # Copy the app package file
-COPY package*.json ./
+COPY package.json /src/package.json
+COPY package-lock.json /src/package-lock.json
 
 # Copy local directories to the current local directory of our docker image (/app)
-COPY ./src ./src
-COPY ./public ./public
+COPY . /src
 
 # Install node packages & build react
 RUN npm install -g npm@latest \
@@ -20,6 +18,7 @@ RUN npm install -g npm@latest \
     && npm install \
     && npm run build
 
+# Expose frontend
 EXPOSE 3000
 
 # Start the app using serve command

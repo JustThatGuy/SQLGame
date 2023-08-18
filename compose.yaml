@@ -3,8 +3,7 @@ services:
   app:
     container_name: Frontend
     # Copy the Frontend folder into app
-    build:
-      context: ./Frontend
+    build: Frontend
     # Environment variable just in case.
     environment:
       NODE_ENV: production
@@ -15,56 +14,42 @@ services:
     volumes:
       - ".:/Frontend/"
       - /Frontend/node_modules
-    networks:
-      - public
     depends_on:
-      - backend
+      - server
   
   # Build the API server
   server:
     container_name: Backend
     # Based on the Backend folder
-    build:
-      args:
-      - NODE_ENV=development
-      context: ./Backend
-      target: development
+    build: Backend
     command: npm run start-watch
     environment:
-      - DATABASE_DB=example
-      - DATABASE_USER=root
-      - DATABASE_PASSWORD=/run/secrets/db-password
-      - DATABASE_HOST=db
+      - DATABASE_DB=monster
+      - DATABASE_USER=sql-gamer
+      - DATABASE_PASSWORD=wachtwoord
+      - DATABASE_HOST=database
       - NODE_ENV=development
     ports:
       - 8080:8080
-      - 3000:3000
-      - 5432:5432
-    secrets:
-      - db-password
     volumes:
       - ./Backend/src:/code/src:ro
       - ./Backend/package.json:/code/package.json
       - ./Backend/package-lock.json:/code/package-lock.json
-      - back-notused:/opt/app/node_modules
-    networks:
-      - public
-      - private
     depends_on:
-      - db
+      - database
   
   # Set up PostgresSQL database
   database:
     container_name: PostgresSQL
     # Alpine based image for low memory usage
-    image: postgres:12-alpine
+    image: postgres:latest
     restart: always
     # Bunch of config stuff
     environment:
-      - POSTGRES_PASSWORD=SQLDevPwd01!
-    networks:
-      - server-side
+      - POSTGRES_DB=monster
+      - POSTGRES_USER=sql-gamer
+      - POSTGRES_PASSWORD=wachtwoord
     ports:
       - 5432:5432
     volumes:
-      - ./SQL:/var/lib/postgresql/data
+      - ./SQL:/docker-entrypoint-initdb.d/create_tables.sql

@@ -1,4 +1,3 @@
-import { getQuest } from '../../Backend/src/database';
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
@@ -18,8 +17,13 @@ function App() {
         })
     }
 
+    const [query, setQuery] = useState('Enter your SQL code here.');
+    const handleQueryChange = event => {
+        setQuery(event.target.value);
+    }
+
     function executeSQL() {
-        fetch('http://localhost:8080/quests')
+        fetch('http://localhost:8080/sqlQuery')
             .then(response => {
                 return response.text();
             })
@@ -35,7 +39,7 @@ function App() {
                     <label for="field" class="FieldLabel">SQL Query</label>
                     <button onclick={executeSQL} id="Execute" class="ExecuteButton">Execute ►</button>
                 </div>
-                <textarea id="SQLQueryField" placeholder="Enter your SQL code here."></textarea>
+                <textarea id="SQLQueryField" value={query} onChange={handleQueryChange}></textarea>
             </div>
     
             <div class="ResultDisplay">
