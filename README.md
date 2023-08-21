@@ -1,5 +1,5 @@
 # Getting started with the SQL Game
-This project was created using docker. In order to set up the project, there's a few simple steps to take:
+This project was created using docker!.. Which means that in order to set up shop, there's a few simple steps to take:
 
 ## 001 // Cloning the project
 The first step is cloning the project from here and opening it in your code editor. My personal preference goes to Visual Studio Code, but feel free to use anything else! Just be sure to run proper version management in case we decide to patch the game in the future, or you'd like to fork it to help us out.
