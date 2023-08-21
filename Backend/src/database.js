@@ -15,7 +15,7 @@ const getQuest = () => {
         }
         resolve(results.rows);
       })
-    }) 
+    })
   }
 
 const sqlQuery = (body) => {
