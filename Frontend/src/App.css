@@ -57,9 +57,6 @@ div {
   position: relative;
 }
 
-.TabMenu {
-}
-
 .TabLink {
   background-color: var(--c-primary);
   border-radius: 8px 8px 0px 0px;
@@ -79,10 +76,6 @@ div {
   min-height: 96%;
   overflow: hidden;
   padding: 16px;
-}
-
-.TabContent {
-  
 }
 
 
@@ -154,8 +147,8 @@ div {
 }
 
 .QuestDetails {
-  margin: -16px 0 0 0;
-  padding-left: 8px;
+  margin: -12px 0 0 0;
+  padding: 0 0 0 8px;
 }
 
 .QuestText {

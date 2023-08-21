@@ -44,9 +44,9 @@ function App() {
                     </div>
                     <div class="TabPane" role="tablist">
                         <div data-w-map="Map" class="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0"></div>
-                        <div data-w-map="Map" class="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1"></div>
-                        <div data-w-map="Map" class="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
-                        <div data-w-map="Map" class="TabContent" id="TabMenu-0-TabContent-3" role="tabpanel" aria-labelledby="TabMenu-0-Tab-3"></div>
+                        <div data-w-map="Inventory" class="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1"></div>
+                        <div data-w-map="Locations" class="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
+                        <div data-w-map="People" class="TabContent" id="TabMenu-0-TabContent-3" role="tabpanel" aria-labelledby="TabMenu-0-Tab-3"></div>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ function App() {
                     <div class="Form" id="SQLForm" aria-label="SQL Form">
                         <div class="QueryHeader">
                             <label for="field" class="FieldLabel">SQL Query</label>
-                            <button onclick={executeSQL} id="Execute" class="ExecuteButton">Execute ►</button>
+                            <button onClick={executeSQL} id="Execute" class="ExecuteButton">Execute ►</button>
                         </div>
                         <textarea id="SQLQueryField" value={query} onChange={handleQueryChange}></textarea>
                     </div>  
@@ -88,6 +88,6 @@ function App() {
             </div>
         </div>
     );
-}
+};
 
 export default App;
