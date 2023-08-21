@@ -23,10 +23,13 @@ SET row_security = off;
 -- Name: game; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
+CREATE USER sqlgamer WITH PASSWORD 'wachtwoord';
+
+GRANT ALL PRIVILEGES ON DATABASE monster TO sqlgamer;
+
 CREATE SCHEMA game;
 
-
-ALTER SCHEMA game OWNER TO postgres;
+GRANT ALL PRIVILEGES ON SCHEMA game TO sqlgamer;
 
 --
 -- TOC entry 240 (class 1255 OID 16595)
@@ -946,7 +949,7 @@ ALTER TABLE ONLY game.solution
 -- Name: FUNCTION add_to_inventory(p_item_id integer); Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT ALL ON FUNCTION game.add_to_inventory(p_item_id integer) TO "sql-gamer";
+GRANT ALL ON FUNCTION game.add_to_inventory(p_item_id integer) TO "sqlgamer";
 
 
 --
@@ -955,7 +958,7 @@ GRANT ALL ON FUNCTION game.add_to_inventory(p_item_id integer) TO "sql-gamer";
 -- Name: FUNCTION check_solution(p_loc_id integer, p_mnstr_id integer, p_strat_id integer); Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT ALL ON FUNCTION game.check_solution(p_loc_id integer, p_mnstr_id integer, p_strat_id integer) TO "sql-gamer";
+GRANT ALL ON FUNCTION game.check_solution(p_loc_id integer, p_mnstr_id integer, p_strat_id integer) TO "sqlgamer";
 
 
 --
@@ -964,7 +967,7 @@ GRANT ALL ON FUNCTION game.check_solution(p_loc_id integer, p_mnstr_id integer, 
 -- Name: FUNCTION get_message(p_msg_type character varying); Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT ALL ON FUNCTION game.get_message(p_msg_type character varying) TO "sql-gamer";
+GRANT ALL ON FUNCTION game.get_message(p_msg_type character varying) TO "sqlgamer";
 
 
 --
@@ -973,7 +976,7 @@ GRANT ALL ON FUNCTION game.get_message(p_msg_type character varying) TO "sql-gam
 -- Name: FUNCTION insert_solution(p_msg_type character varying, p_loc_id integer, p_monster_id integer, p_strategy_id integer, p_item_id integer); Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT ALL ON FUNCTION game.insert_solution(p_msg_type character varying, p_loc_id integer, p_monster_id integer, p_strategy_id integer, p_item_id integer) TO "sql-gamer";
+GRANT ALL ON FUNCTION game.insert_solution(p_msg_type character varying, p_loc_id integer, p_monster_id integer, p_strategy_id integer, p_item_id integer) TO "sqlgamer";
 
 
 --
@@ -982,7 +985,7 @@ GRANT ALL ON FUNCTION game.insert_solution(p_msg_type character varying, p_loc_i
 -- Name: TABLE item; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.item TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.item TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -991,7 +994,7 @@ GRANT SELECT ON TABLE game.item TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE location; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.location TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.location TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1000,7 +1003,7 @@ GRANT SELECT ON TABLE game.location TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE person; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.person TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.person TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1009,7 +1012,7 @@ GRANT SELECT ON TABLE game.person TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE all_items; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.all_items TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.all_items TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1018,7 +1021,7 @@ GRANT SELECT ON TABLE game.all_items TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE beach_items; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.beach_items TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.beach_items TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1027,7 +1030,7 @@ GRANT SELECT ON TABLE game.beach_items TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE inventory; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.inventory TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.inventory TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1036,7 +1039,7 @@ GRANT SELECT ON TABLE game.inventory TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE kill_strategy; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.kill_strategy TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.kill_strategy TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1045,7 +1048,7 @@ GRANT SELECT ON TABLE game.kill_strategy TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE monster; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.monster TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.monster TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1054,7 +1057,7 @@ GRANT SELECT ON TABLE game.monster TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE my_solution; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.my_solution TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.my_solution TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1063,7 +1066,7 @@ GRANT SELECT ON TABLE game.my_solution TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE quest; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.quest TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.quest TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1072,7 +1075,7 @@ GRANT SELECT ON TABLE game.quest TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE solution; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.solution TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.solution TO "sqlgamer" WITH GRANT OPTION;
 
 
 --
@@ -1081,7 +1084,7 @@ GRANT SELECT ON TABLE game.solution TO "sql-gamer" WITH GRANT OPTION;
 -- Name: TABLE solution_message; Type: ACL; Schema: game; Owner: postgres
 --
 
-GRANT SELECT ON TABLE game.solution_message TO "sql-gamer" WITH GRANT OPTION;
+GRANT SELECT ON TABLE game.solution_message TO "sqlgamer" WITH GRANT OPTION;
 
 
 -- Completed on 2023-08-17 18:37:18

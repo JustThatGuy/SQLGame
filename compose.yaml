@@ -38,16 +38,16 @@ services:
   
   # Set up PostgresSQL database
   database:
-    container_name: PostgresSQL
+    container_name: PostgreSQL
     # Alpine based image for low memory usage
     image: postgres:latest
     restart: always
     # Bunch of config stuff
     environment:
       - POSTGRES_DB=monster
-      - POSTGRES_USER=sql-gamer
-      - POSTGRES_PASSWORD=wachtwoord
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
     volumes:
-      - ./SQL:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./SQL:/docker-entrypoint-initdb.d/
