@@ -13,7 +13,6 @@ services:
     # Copy volumes for file retention.
     volumes:
       - ".:/Frontend/"
-      - /Frontend/node_modules
     depends_on:
       - server
   
@@ -22,7 +21,6 @@ services:
     container_name: Backend
     # Based on the Backend folder
     build: Backend
-    command: npm run start-watch
     environment:
       - DATABASE_DB=monster
       - DATABASE_USER=sql-gamer
@@ -32,7 +30,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./Backend/src:/code/src:ro
+      - ".:/Backend/"
       - ./Backend/package.json:/code/package.json
       - ./Backend/package-lock.json:/code/package-lock.json
     depends_on:

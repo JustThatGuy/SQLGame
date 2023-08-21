@@ -1,7 +1,7 @@
 {
   "name": "node-postgres",
   "version": "0.0.1",
-  "description": "postgres API",
+  "description": "Express API",
   "main": "index.js",
   "author": "Robin Potze",
   "license": "ISC",
@@ -12,5 +12,8 @@
     "pg": "^8.11.2",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1"
+  },
+  "scripts": {
+    "start-watch": "react-scripts start"
   }
 }
