@@ -19,7 +19,7 @@ RUN npm install -g npm@latest \
     && npm run build
 
 # Expose frontend
-EXPOSE 3000
+EXPOSE 8228
 
 # Start the app using serve command
 CMD [ "serve", "-s", "build" ]
