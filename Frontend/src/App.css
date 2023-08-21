@@ -4,13 +4,178 @@
   --c-primary: #e0cba8;
   --c-secondary: #f8f8f8;
   --c-action: #88498f;
+  --c-highlight: #d063ff;
   --c-transparent: rgba(255, 255, 255, 0);
+  --c-shadow: rgba(0, 0, 0, 0.2);
 }
 
+body {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+.Screen {
+  border: 1px solid var(--c-primary);
+  border-radius: 8px;
+  column-gap: 20px;
+  row-gap: 20px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 2.25fr;
+  grid-template-rows: auto;
+  margin: 4vh auto;
+  padding: 20px;
+  width: 96%;
+  height: 92vh;
+  overflow: hidden;
+  justify-content: center;
+  color: var(--c-primary);
+  background-color: var(--c-background);
+}
+
+
+
+/* Left side tabs */
+.TabCell {
+  flex-direction: column;
+  grid-area: span 1 / span 1 / span 1 / span 1;
+  justify-content: flex-start;
+}
+
+.Tabs {
+  height: 100%;
+  position: relative;
+}
+
+.TabMenu {
+}
+
+.TabLink {
+  background-color: var(--c-primary);
+  border-radius: 8px 8px 0px 0px;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  padding: 8px  24px;
+  text-align: center;
+  color: var(--c-secondarybg);
+  text-decoration: none;
+}
+
+.TabPane {
+  background-color: var(--c-secondarybg);
+  border-radius: 8px;
+  display: block;
+  min-height: 96%;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.TabContent {
+  
+}
+
+
+
+/* main content */
+.OperationsCell {
+  align-items: flex-start;
+  flex-direction: column;
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+/* Quest background info */
+.QuestCell {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  height: 33%;
+  margin-bottom: 12px;
+  padding: 0;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  display: grid;
+}
+
+.QuestIntroCell {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.LevelHeader {
+  font-size: 28px;
+  margin: 0.5em 0 0.67em 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.LevelContext {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+/* New Quest */
+.NewQuestCell {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-area: span 1 / span 1 / span 1 / span 1;
+  color: var(--c-secondarybg);
+}
+
+.NewQuest {
+  background-image: linear-gradient(45deg, var(--c-secondary), var(--c-primary));
+  border-left: 5px solid var(--c-highlight);
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 1px -1px 5px var(--c-shadow);
+  margin: 0 0 10px 0;
+  padding: 10px 16px;
+}
+
+.BoldText {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.QuestDetails {
+  margin: -16px 0 0 0;
+  padding-left: 8px;
+}
+
+.QuestText {
+  box-shadow: none;
+  color: var(--c-primary);
+  border-left: 2px solid var(--c-secondary);
+  margin: 0 auto 0 auto;
+  padding: 16px 8px;
+}
+
+/* Text fields */
 .LevelLayout {
-  height: 98vh;
-  width: 98vw;
-  margin: auto
+  height: 66%;
+  margin: auto;
+  grid-row-gap: 8px;
+  grid-column-gap: 20px;
+  grid-template-rows: .5fr .5fr;
+  grid-template-columns: 3fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
 }
 
 .Form {
@@ -50,6 +215,10 @@
   text-align: center;
 }
 
+.FieldLabel {
+  font-size: 18px;
+}
+
 #SQLQueryField {
   background-color: var(--c-transparent);
   border-color: var(--c-primary);
@@ -61,9 +230,9 @@
   font-weight: 400;
   line-height: 20px;
   height: 90%;
-  width: 97vw;
+  width: 100%;
   padding: 8px;
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px;
+  box-shadow: var(--c-shadow) 1px 1px 5px 0px;
 }
 
 .ResultDisplay {
@@ -82,7 +251,7 @@
 .Result {
   background-color: var(--c-secondarybg);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px inset;
+  box-shadow: var(--c-shadow) 1px 1px 5px 0px inset;
   color: var(--c-secondary);
   display: block;
   font-size: 14px;
