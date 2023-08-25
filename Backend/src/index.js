@@ -30,6 +30,15 @@ app.get('/', (req, res) => {
   })
 })
 
+app.post('/',(req,res)=>{
+  const sql="INSERT INTO monster (name,description) VALUES ('test name','test description')";
+  db.query(sql ,(err,result)=>{
+  console.log(result);
+  })
+  
+})
+
+
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to sql application." });
