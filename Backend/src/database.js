@@ -1,12 +1,13 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'sqlgamer',
+  password: 'wachtwoord',
   host: 'localhost',
   database: 'monster',
-  password: 'wachtwoord',
   port: 5432,
 });
 
+// not sure if we need these as of right now
 const getQuest = () => {
     return new Promise(function(resolve, reject) {
       pool.query('SELECT * FROM Quests ORDER BY id ASC', (error, results) => {
@@ -18,6 +19,7 @@ const getQuest = () => {
     })
   }
 
+//might just be doing double the work.
 const sqlQuery = (body) => {
   return new Promise(function(resolve, reject) {
     const { userQuery } = body
@@ -31,6 +33,7 @@ const sqlQuery = (body) => {
 }
   
 module.exports = {
+  sqlQuery,
   getQuest,
-  sqlQuery
+  pool
 }

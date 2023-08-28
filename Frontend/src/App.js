@@ -8,7 +8,7 @@ function App() {
     }, []);
     
     function getQuest() {
-        fetch('http://localhost:8080')
+        fetch('http://localhost:8080/getQuest')
             .then(response => {
                 return response.text();
             })
@@ -22,13 +22,13 @@ function App() {
         setQuery(event.target.value);
     }
 
-    function executeSQL() {
+    function sqlQuery() {
         fetch('http://localhost:8080/sqlQuery')
             .then(response => {
                 return response.text();
             })
             .then(data => {
-                setQuest(data);
+                setQuery(data);
             })
     }
 
@@ -75,7 +75,7 @@ function App() {
                     <div class="Form" id="SQLForm" aria-label="SQL Form">
                         <div class="QueryHeader">
                             <label for="field" class="FieldLabel">SQL Query</label>
-                            <button onClick={executeSQL} id="Execute" class="ExecuteButton">Execute ►</button>
+                            <button onClick={sqlQuery} id="Execute" class="ExecuteButton">Execute ►</button>
                         </div>
                         <textarea id="SQLQueryField" value={query} onChange={handleQueryChange}></textarea>
                     </div>  

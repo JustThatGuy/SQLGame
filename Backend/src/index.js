@@ -3,6 +3,7 @@ const bodyParser= require(`body-parser`)
 const database = require('./database')
 // const cors= require(`cors`)
 
+// set express env
 const app= express()
 const PORT = process.env.PORT || 8080;
 
@@ -20,7 +21,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => {
+// request all quest data
+app.get('/quest', (req, res) => {
   database.getQuest()
   .then(response => {
     res.status(200).send(response);
@@ -30,18 +32,29 @@ app.get('/', (req, res) => {
   })
 })
 
-app.post('/',(req,res)=>{
-  const sql="INSERT INTO monster (name,description) VALUES ('test name','test description')";
-  db.query(sql ,(err,result)=>{
-  console.log(result);
-  })
-  
-})
-
+// get whatever the user specifies in the request query.
+app.get('/sqlQuery', async (req,res) => {
+  try {
+    // set query to body
+    const {query} = req.body;
+    // await for a request
+    const queryText = await database.query(
+      //has to just be whatever user put in
+      "(query)",
+      [query]
+    );
+    
+    // set response json to all rows
+    res.json(queryText.rows)
+  // just in case
+  } catch (err) {
+    console.error(err.message);
+  }
+});
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to sql application." });
+  res.json({ message: "Welcome to the api server!" });
 });
 
 // set port, listen for requests
