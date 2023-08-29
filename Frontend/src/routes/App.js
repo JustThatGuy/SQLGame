@@ -1,37 +1,7 @@
-import './App.css';
+import '../css/App.css';
 import React, {useState, useEffect} from 'react';
 
 function App() {
-    const [quest, setQuest] = useState(false);
-    useEffect(() => {
-        getQuest();
-    }, []);
-    
-    function getQuest() {
-        fetch('http://localhost:8080/getQuest')
-            .then(response => {
-                return response.text();
-            })
-        .then(data => {
-            setQuest(data);
-        })
-    }
-
-    const [query, setQuery] = useState('Enter your SQL code here.');
-    const handleQueryChange = event => {
-        setQuery(event.target.value);
-    }
-
-    function sqlQuery() {
-        fetch('http://localhost:8080/sqlQuery')
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                setQuery(data);
-            })
-    }
-
     return (
         <div class="Screen">
             <div class="TabCell">
