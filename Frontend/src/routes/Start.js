@@ -1,14 +1,14 @@
 import '../css/Start.css';
+import { Link } from 'react-router-dom';
 
 function Start() {
     return (
-        <div class="Background">
-            <div class="Title">
-                <image class="GameLogo"></image>
-                <h1 class="GameTitle">MonsterDB</h1>
+        <div className="Background">
+            <div className="Title">
+                <div className="GameLogo"></div>
             </div>
-            <div class="Menu">
-                <button class="StartGameButton">Start Game!</button>
+            <div className="Menu">
+                <Link to="levels/:level1" className="StartGameButton">Start Game</Link>
             </div>
         </div>
     );
