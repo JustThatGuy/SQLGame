@@ -1,0 +1,82 @@
+:root {
+    --c-background: #363d3d;
+    --c-secondarybg: #333;
+    --c-primary: #e0cba8;
+    --c-secondary: #f8f8f8;
+    --c-action: #88498f;
+    --c-highlight: #d063ff;
+    --c-transparent: rgba(255, 255, 255, 0);
+    --c-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.LevelScreen {
+    align-items: center;
+    background-color: var(--c-background);
+    border: 1px solid var(--c-primary);
+    border-radius: 8px;
+    color: var(--c-primary);
+    display: grid;
+    margin: 4vh auto;
+    padding: 20px;
+    width: 96%;
+    height: 92vh;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.LevelList {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-self: stretch;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+}
+
+.Card {
+    border: 1px solid var(--c-primary);
+    border-radius: 8px;
+    color: var(--c-secondary);
+    cursor: pointer;
+    display: grid;
+    float: left;
+    grid-template-rows: 1fr 0.5fr;
+    min-height: 40vh;
+    min-width: 25vw;
+    margin: 8px;
+}
+
+.Card:hover {
+    background-color: var(--c-primary);
+    box-shadow: 8px 4px 4px var(--c-shadow);
+    transform: scale(1.02);
+}
+
+.LevelImage {
+    display: block;
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.LevelImage > img {
+    object-fit: cover;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.LevelCardDescription {
+    display: block;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    justify-content: start;
+    align-content: center;
+}

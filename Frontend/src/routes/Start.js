@@ -8,7 +8,7 @@ function Start() {
                 <div className="GameLogo"></div>
             </div>
             <div className="Menu">
-                <Link to="levels/:level1" className="StartGameButton">Start Game</Link>
+                <Link to="levels/" className="StartGameButton">Start Game</Link>
             </div>
         </div>
     );
