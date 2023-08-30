@@ -21,9 +21,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-// request all quest data
-app.get('/quest', (req, res) => {
-  database.getQuest()
+// request all inventory data
+app.get('/inventory', (req, res) => {
+  database.getInventory()
   .then(response => {
     res.status(200).send(response);
   })
@@ -38,7 +38,7 @@ app.get('/sqlQuery', async (req,res) => {
     // set query to body
     const {query} = req.body;
     // await for a request
-    const queryText = await database.query(
+    const queryText = await database.sqlQuery(
       //has to just be whatever user put in
       "(query)",
       [query]
