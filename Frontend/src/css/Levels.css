@@ -16,6 +16,7 @@
     border-radius: 8px;
     color: var(--c-primary);
     display: grid;
+    grid-template-rows: 0.25fr 2fr;
     margin: 4vh auto;
     padding: 20px;
     width: 96%;
@@ -24,12 +25,22 @@
     justify-content: center;
 }
 
+.ScreenTitle {
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+}
+
+.ScreenHeader {
+
+}
+
 .LevelList {
     list-style-type: none;
     display: flex;
     width: 100%;
     justify-self: stretch;
-    align-self: center;
+    align-self: start;
     margin: 0;
     padding: 0;
     overflow-x: scroll;
@@ -43,9 +54,13 @@
     display: grid;
     float: left;
     grid-template-rows: 1fr 0.5fr;
-    min-height: 40vh;
-    min-width: 25vw;
+    min-height: 30%;
+    max-height: 35%;
+    min-width: 42%;
+    max-width: 50%;
     margin: 8px;
+    transition-duration: 0.1s;
+    text-decoration: none;
 }
 
 .Card:hover {
