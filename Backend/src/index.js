@@ -32,6 +32,16 @@ app.get('/inventory', (req, res) => {
   })
 })
 
+app.get('/inventory/add', async (req, res) => {
+  const inputValue = req.body.inputValue;
+  try {
+    const result = await database.pool.query('select game.add_to_inventory($1)', [inputValue]);
+    res.json({ result: result.rows[0] });
+  } catch (error) {
+    console.error('Error calling function:', error);
+    res.status(500).json({ error: 'An error occurred' });
+  }
+});
 // get whatever the user specifies in the request query.
 app.get('/sqlQuery', async (req,res) => {
   try {
