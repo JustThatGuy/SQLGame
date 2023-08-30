@@ -1031,6 +1031,8 @@ GRANT SELECT ON TABLE game.beach_items TO "sqlgamer" WITH GRANT OPTION;
 --
 
 GRANT SELECT ON TABLE game.inventory TO "sqlgamer" WITH GRANT OPTION;
+GRANT INSERT ON TABLE game.inventory TO "sqlgamer";
+GRANT DELETE ON TABLE game.inventory TO "sqlgamer";
 
 
 --
@@ -1058,6 +1060,7 @@ GRANT SELECT ON TABLE game.monster TO "sqlgamer" WITH GRANT OPTION;
 --
 
 GRANT SELECT ON TABLE game.my_solution TO "sqlgamer" WITH GRANT OPTION;
+GRANT INSERT ON TABLE game.my_solution TO "sqlgamer";
 
 
 --
