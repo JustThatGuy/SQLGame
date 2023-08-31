@@ -43,21 +43,34 @@
   text-decoration: none;
 }
 
+.TabLink[aria-selected='true'] {
+  background-color: var(--c-action);
+  color: var(--c-secondary);
+}
+
 .TabPane {
   background-color: var(--c-secondarybg);
   border-radius: 8px;
   display: block;
   min-height: 96%;
+  max-height: 96%;
   overflow: hidden;
   padding: 16px;
+  box-shadow: 1px 1px 5px var(--c-shadow) inset;
 }
 
-.Map {
-  width: 96%;
-  height: 96%;
-  object-fit: cover;
-  transform: translate(-5%, 30%) scale(2.6);
+.TabContent {
+  height: 100%;
+  width: 100%;
 }
+
+#TabMenu-0-TabContent-0 {
+  background-image: url('../img/Aintree.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 
 
 /* main content */
@@ -70,7 +83,7 @@
 /* Quest background info */
 .QuestCell {
   grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   height: 100%;
   margin-bottom: 12px;
   padding: 0;
@@ -141,15 +154,15 @@
 
 /* Text fields */
 .LevelLayout {
-  height: 100%;
+  height: 96%;
   width: 100%;
-  margin: auto;
   grid-row-gap: 8px;
   grid-column-gap: 20px;
   grid-template-rows: .5fr .5fr;
   grid-template-columns: 3fr;
   grid-auto-columns: 1fr;
   justify-content: center;
+  align-self: end;
   grid-column: 1;
   grid-row: 1;
 }
@@ -227,10 +240,44 @@
 .Result {
   background-color: var(--c-secondarybg);
   border-radius: 8px;
-  box-shadow: var(--c-shadow) 1px 1px 5px 0px inset;
+  box-shadow: 1px 1px 5px var(--c-shadow) inset;
   color: var(--c-secondary);
   display: block;
   font-size: 14px;
-  height: 90%;
-  padding: 8px;
+  height: 94%;
+  padding: 16px;
+}
+
+.Result table {
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.Result th {
+  height: 3vh;
+  border-right: 1px solid var(--c-secondary);
+  border-bottom: 1px solid var(--c-secondary);
+  text-align: left;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.Result th:last-child {
+  border-right: none;
+}
+
+.Result td {
+  border-right: 1px solid var(--c-secondary);
+  height: 2vh;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.Result td:last-child {
+  border: none;
 }
