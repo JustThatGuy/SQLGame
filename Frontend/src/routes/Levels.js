@@ -28,7 +28,7 @@ function Levels() {
     }];
     // Map levels to actual cards
     const levelCards = levels.map(level => 
-        <Link to=":level1" class="Card" key={level.id}>
+        <Link to=":level1" className="Card" key={level.id}>
             <div className="LevelImage">
                 <img src={level.image} alt={level.name}/>
             </div>

@@ -12,7 +12,9 @@ function App() {
                         <a data-w-tab="People" className="TabLink" id="TabMenu-0-Tab-3" aria-controls="TabMenu-0-TabContent-3" href="#TabMenu-0-TabContent-3" role="tab" aria-selected="false">People</a>
                     </div>
                     <div className="TabPane" role="tablist">
-                        <div data-w-map="Map" className="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0"></div>
+                        <div data-w-map="Map" className="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0">
+                            <img src="../img/Aintree.png" className='Map'></img>
+                        </div>
                         <div data-w-map="Inventory" className="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1"></div>
                         <div data-w-map="Locations" className="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
                         <div data-w-map="People" className="TabContent" id="TabMenu-0-TabContent-3" role="tabpanel" aria-labelledby="TabMenu-0-Tab-3"></div>

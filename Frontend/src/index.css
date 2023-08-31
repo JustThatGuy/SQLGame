@@ -9,4 +9,16 @@
 
 body {
   background-color: var(--c-background);
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
 }

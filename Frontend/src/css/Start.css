@@ -1,22 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-:root {
-    --c-background: #363d3d;
-    --c-secondarybg: #333;
-    --c-primary: #e0cba8;
-    --c-secondary: #f8f8f8;
-    --c-action: #88498f;
-    --c-highlight: #d063ff;
-    --c-transparent: rgba(255, 255, 255, 0);
-    --c-shadow: rgba(0, 0, 0, 0.2);
-}
-
-body {
-    margin: 0;
-}
-
 .Background {
     background-image: url('../img/Fantasy_Landscape.jpg');
     background-repeat: no-repeat;
