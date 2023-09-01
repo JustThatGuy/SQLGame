@@ -5,6 +5,7 @@
   --c-secondary: #f8f8f8;
   --c-action: #88498f;
   --c-transparent: rgba(255, 255, 255, 0);
+  --c-shadow: rgba(0, 0, 0, 0.2);
 }
 
 body {
