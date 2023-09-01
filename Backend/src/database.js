@@ -2,17 +2,21 @@ const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'sqlgamer',
   password: 'wachtwoord',
-  host: 'PostgreSQL',
+  host: 'localhost',
   database: 'monster',
   port: 5432,
 });
 
-const getInventory = () => {
+const runQuery = (query) => {
   return new Promise(function(resolve, reject) {
-    pool.query('select * from game.inventory;', (error, results) => {
+    pool.query(query, (error, results) => {
       if (error) {
-        reject(error);
-        console.log(error);
+        let msg = error;
+        if(error.message) {
+          msg = error.message;
+        }
+        reject(msg);
+        console.log(msg);
         return;
       }
       resolve(results.rows);
@@ -20,21 +24,11 @@ const getInventory = () => {
   })
 }
 
-//might just be doing double the work.
-const sqlQuery = (body) => {
-  return new Promise(function(resolve, reject) {
-    const { userQuery } = body
-    pool.query('(userQuery)', [], (error, results) => {
-      if (error) {
-        reject(error)
-      }
-      resolve(results.rows)
-    })
-  })
+const getInventory = () => {
+  return runQuery('select * from game.inventory;');
 }
   
 module.exports = {
-  sqlQuery,
-  pool,
-  getInventory
+  getInventory,
+  runQuery
 }
