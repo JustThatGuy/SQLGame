@@ -23,7 +23,7 @@ services:
     build: Backend
     environment:
       - DATABASE_DB=monster
-      - DATABASE_USER=sql-gamer
+      - DATABASE_USER=sqlgamer
       - DATABASE_PASSWORD=wachtwoord
       - DATABASE_HOST=database
       - NODE_ENV=development
