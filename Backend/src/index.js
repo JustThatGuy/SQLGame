@@ -46,7 +46,9 @@ app.post('/query', async (req, res) => {
       })
 })
 
-app.get('/inventory/add', async (req, res) => {
+// add item to inventory
+// currently not in use
+app.post('/inventory', async (req, res) => {
   const inputValue = req.body.inputValue;
   try {
     const result = await database.pool.query('select game.add_to_inventory($1)', [inputValue]);
@@ -54,25 +56,6 @@ app.get('/inventory/add', async (req, res) => {
   } catch (error) {
     console.error('Error calling function:', error);
     res.status(500).json({ error: 'An error occurred' });
-  }
-});
-// get whatever the user specifies in the request query.
-app.get('/sqlQuery', async (req,res) => {
-  try {
-    // set query to body
-    const {query} = req.body;
-    // await for a request
-    const queryText = await database.sqlQuery(
-      //has to just be whatever user put in
-      "(query)",
-      [query]
-    );
-    
-    // set response json to all rows
-    res.json(queryText.rows)
-  // just in case
-  } catch (err) {
-    console.error(err.message);
   }
 });
 

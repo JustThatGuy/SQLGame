@@ -65,12 +65,11 @@
 .TabContent {
   height: 100%;
   width: 100%;
-  margin: auto;
   border-radius: 8px;
 }
 
 .Map {
-  background-image: url('../img/Aintree.png') no-repeat center contain;
+  object-fit: cover;
   min-height: 100%;
   max-width: 100%;
   border-radius: 8px;
@@ -117,6 +116,7 @@
 .LevelContext {
   margin: 0 0 10px 0;
   padding: 0;
+  white-space: pre-wrap;
 }
 
 /* New Quest */

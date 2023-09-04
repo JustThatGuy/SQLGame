@@ -26,6 +26,7 @@ function Levels() {
         desc: 'Where ends meet',
         image: '../img/level4.png'
     }];
+    
     // Map levels to actual cards
     const levelCards = levels.map(level => 
         <Link to=":level1" className="Card" key={level.id}>
