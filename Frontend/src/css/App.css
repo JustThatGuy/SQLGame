@@ -52,8 +52,7 @@
   background-color: var(--c-secondarybg);
   border-radius: 8px;
   display: block;
-  min-height: 96%;
-  max-height: 96%;
+  height: 96%;
   overflow: hidden;
   padding: 16px;
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
@@ -67,11 +66,9 @@
 }
 
 .Map {
-  background-image: url('../img/Aintree.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 81vh;
+  background-image: url('../img/Aintree.png') no-repeat center contain;
+  min-height: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
 

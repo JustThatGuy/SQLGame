@@ -86,7 +86,12 @@ function App() {
 
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
-                        <div className="Result" id="ResultArea">Hello there</div>
+                        <div className="Result" id="ResultArea">
+                            <table>
+                                <th>Row</th><th>ID</th><th>Name</th><th><td>Description</td></th>
+                                <tr><td>1</td><td>1</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

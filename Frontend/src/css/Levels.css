@@ -20,10 +20,6 @@
     height: 100%;
 }
 
-.ScreenHeader {
-    
-}
-
 .LevelList {
     list-style-type: none;
     display: flex;

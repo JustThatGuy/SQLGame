@@ -1,11 +1,14 @@
-const express= require(`express`)
-const bodyParser= require(`body-parser`)
+const express = require(`express`)
+const bodyParser = require(`body-parser`)
 const database = require('./database')
-// const cors= require(`cors`)
+const cors= require(`cors`)
 
 // set express env
 const app= express()
 const PORT = process.env.PORT || 8080;
+
+// use CORS to handle CORS errors.
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -15,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json())
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8228');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
