@@ -62,13 +62,17 @@
 .TabContent {
   height: 100%;
   width: 100%;
+  margin: auto;
+  border-radius: 8px;
 }
 
-#TabMenu-0-TabContent-0 {
+.Map {
   background-image: url('../img/Aintree.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  height: 81vh;
+  border-radius: 8px;
 }
 
 
