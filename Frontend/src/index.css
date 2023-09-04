@@ -26,3 +26,10 @@ body {
 div {
   display: block;
 }
+
+ul {
+  margin-inline: 0;
+  margin: 0;
+  padding-inline: 0;
+  padding: 0;
+}

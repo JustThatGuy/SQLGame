@@ -1,4 +1,5 @@
 import '../css/App.css';
+import TabMenu from '../components/TabMenu';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
 
 
 
-    // Define debug quest info
+    // Define mock quest info
     const quests = [{
         id: 0,
         name: 'Level One',
@@ -72,14 +73,15 @@ function App() {
     return (
         <div className="Screen">
             <div className="TabCell">
-                <div data-current="Map" className="Tabs">
+                <TabMenu></TabMenu>
+                {/* <div data-current="Map" className="Tabs">
                     <div className="TabMenu" role="tablist">
                         <a data-w-tab="Map" className="TabLink" id="TabMenu-0-Tab-0" aria-controls="TabMenu-0-TabContent-0" href="#TabMenu-0-TabContent-0" role="tab" aria-selected="true">Map</a>
                         <a data-w-tab="Inventory" className="TabLink" id="TabMenu-0-Tab-1" aria-controls="TabMenu-0-TabContent-1" href="#TabMenu-0-TabContent-1" role="tab" aria-selected="false">Inventory</a>
                         <a data-w-tab="Locations" className="TabLink" id="TabMenu-0-Tab-2" aria-controls="TabMenu-0-TabContent-2" href="#TabMenu-0-TabContent-2" role="tab" aria-selected="false">Locations</a>
                         <a data-w-tab="People" className="TabLink" id="TabMenu-0-Tab-3" aria-controls="TabMenu-0-TabContent-3" href="#TabMenu-0-TabContent-3" role="tab" aria-selected="false">People</a>
                     </div>
-                    <div className="TabPane" role="tablist">
+                    <div className="TabPane" role="tabpanel">
                         <div data-w-map="Map" className="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0">
                             <img src="../img/Aintree.png" className='Map'></img>
                         </div>
@@ -89,7 +91,7 @@ function App() {
                         <div data-w-map="Locations" className="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
                         <div data-w-map="People" className="TabContent" id="TabMenu-0-TabContent-3" role="tabpanel" aria-labelledby="TabMenu-0-Tab-3"></div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="OperationsCell">
