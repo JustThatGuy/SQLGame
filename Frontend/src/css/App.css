@@ -48,6 +48,10 @@
   color: var(--c-secondary);
 }
 
+.TabLink[aria-selected='true']:hover {
+  background-color: var(--c-action-h);
+}
+
 .TabPane {
   background-color: var(--c-secondarybg);
   border-radius: 8px;
@@ -127,7 +131,7 @@
 
 .NewQuest {
   background-image: linear-gradient(45deg, var(--c-secondary), var(--c-primary));
-  border-left: 5px solid var(--c-highlight);
+  border-left: 5px solid var(--c-action-h);
   border-radius: 12px;
   font-size: 16px;
   box-shadow: 1px -1px 5px var(--c-shadow);
@@ -205,6 +209,10 @@
   text-align: center;
 }
 
+.ExecuteButton:hover {
+  background-color: var(--c-action-h);
+}
+
 .FieldLabel {
   font-size: 18px;
 }
@@ -243,40 +251,41 @@
   border-radius: 8px;
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
   color: var(--c-secondary);
-  display: block;
   font-size: 14px;
   height: 94%;
   padding: 16px;
 }
 
 .Result table {
-  display: block;
-  width: 100%;
   border-collapse: collapse;
   border-radius: 8px;
+  display: block;
   font-family: 'Roboto Mono', monospace;
+  width: 100%;
 }
 
 .Result th {
   height: 3vh;
   border-right: 1px solid var(--c-secondary);
   border-bottom: 1px solid var(--c-secondary);
-  text-align: left;
   font-weight: 700;
+  padding: 16px 8px;
+  text-align: left;
   text-transform: capitalize;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 .Result th:last-child {
   border-right: none;
+  width: 100%;
 }
 
 .Result td {
   border-right: 1px solid var(--c-secondary);
-  height: 2vh;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 4px 8px;
+}
+
+.Result td:first-child {
+  text-align: center;
 }
 
 .Result td:last-child {

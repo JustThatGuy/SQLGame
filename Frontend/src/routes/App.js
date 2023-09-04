@@ -47,7 +47,9 @@ function App() {
                         <div data-w-map="Map" className="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0">
                             <img src="../img/Aintree.png" className='Map'></img>
                         </div>
-                        <div data-w-map="Inventory" className="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1"></div>
+                        <div data-w-map="Inventory" className="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1">
+                            <button className="ExecuteButton" onClick={getInventory}>Get Inventory</button>
+                        </div>
                         <div data-w-map="Locations" className="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
                         <div data-w-map="People" className="TabContent" id="TabMenu-0-TabContent-3" role="tabpanel" aria-labelledby="TabMenu-0-Tab-3"></div>
                     </div>
@@ -78,7 +80,6 @@ function App() {
                     <div className="Form" id="SQLForm" aria-label="SQL Form">
                         <div className="QueryHeader">
                             <label className="FieldLabel">SQL Query</label>
-                            <button onClick={getInventory}>Get Inventory</button>
                             <button id="Execute" className="ExecuteButton" onClick={execQuery}>Execute ►</button>
                         </div>
                         <textarea id="SQLQueryField"></textarea>
@@ -88,8 +89,9 @@ function App() {
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
                             <table>
-                                <th>Row</th><th>ID</th><th>Name</th><th><td>Description</td></th>
-                                <tr><td>1</td><td>1</td></tr>
+                                <tr><th>Row</th><th>ID</th><th>Name</th><th>Description</th></tr>
+                                <tr><td>1</td><td>1</td><td>Longsword</td><td>A legendary longsword</td></tr>
+                                <tr><td>2</td><td>12</td><td>Rope</td><td>Rope with a magical touch.</td></tr>
                             </table>
                         </div>
                     </div>

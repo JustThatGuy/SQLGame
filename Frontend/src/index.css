@@ -2,8 +2,11 @@
   --c-background: #363d3d;
   --c-secondarybg: #333;
   --c-primary: #e0cba8;
+  --c-primary-h: #e3d8c5;
   --c-secondary: #f8f8f8;
+  --c-secondary-h: #fff;
   --c-action: #88498f;
+  --c-action-h: #d063ff;
   --c-transparent: rgba(255, 255, 255, 0);
   --c-shadow: rgba(0, 0, 0, 0.2);
 }
