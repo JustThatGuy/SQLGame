@@ -1,11 +1,36 @@
 import '../css/App.css';
-import { useState } from 'react';
 
 function App() {
-    const [isOpen, setIsOpen] = useState(false);
 
-    function toggle() {
-        setIsOpen((isOpen) => !isOpen);
+    const backenduri = 'http://localhost:8080'
+
+    const execQuery = async () => {
+        const query = document.getElementById("SQLQueryField").value
+        if(query) {
+            const res = await fetch(`${backenduri}/query`, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                },
+                body: JSON.stringify({
+                    query: query
+                })
+            });
+            document.getElementById("ResultArea").innerText = await res.text();
+        } else {
+            document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field..."
+        }
+    };
+
+    const getInventory = async () => {
+        const res = await fetch(`${backenduri}/inventory`, {
+            method: 'GET'
+        });
+
+        if(res.ok) {
+            const msg = await res.text();
+            document.getElementById("ResultArea").innerText = msg;
+        }
     }
 
     return (
@@ -20,7 +45,7 @@ function App() {
                     </div>
                     <div className="TabPane" role="tablist">
                         <div data-w-map="Map" className="TabContent" id="TabMenu-0-TabContent-0" role="tabpanel" aria-labelledby="TabMenu-0-Tab-0">
-                            <div className='Map'></div>
+                            <img src="../img/Aintree.png" className='Map'></img>
                         </div>
                         <div data-w-map="Inventory" className="TabContent" id="TabMenu-0-TabContent-1" role="tabpanel" aria-labelledby="TabMenu-0-Tab-1"></div>
                         <div data-w-map="Locations" className="TabContent" id="TabMenu-0-TabContent-2" role="tabpanel" aria-labelledby="TabMenu-0-Tab-2"></div>
@@ -30,26 +55,6 @@ function App() {
             </div>
 
             <div className="OperationsCell">
-                <div className="LevelLayout">
-                    <div className="Form" id="SQLForm" aria-label="SQL Form">
-                        <div className="QueryHeader">
-                            <label className="FieldLabel">SQL Query</label>
-                            <button id="Execute" className="ExecuteButton" onClick={toggle}>Execute ►</button>
-                        </div>
-                        <textarea id="SQLQueryField" placeholder='select * from game.item where person_id = 20;'></textarea>
-                    </div>  
-    
-                    <div className="ResultDisplay">
-                        <label className="DisplayLabel">Result</label>
-                        <div className="Result" id="ResultArea">
-                            {isOpen && <table><tr><th>id</th><th>person_id</th><th>item</th><th>explanation</th></tr><tr class="odd"><td>104</td><td>20</td><td>cucumber</td><td>Very delicious and nutricious</td> </tr>
-                            <tr><td>105</td><td>20</td><td>local lettuce</td><td>Local delicacy. Can be used to lure snails.</td></tr>
-                            <tr class="odd"><td>106</td><td>20</td><td>gherkin</td><td>Pickled baby cucumber.</td></tr>
-                            <tr><td>107</td><td>20</td><td>pickle</td><td>Pickled cucumber.</td></tr>
-                            </table>}
-                        </div>
-                    </div>
-                </div>
                 <div className="QuestCell">
                     <div className="QuestIntroCell">
                         <h1 className="LevelHeader"> Level 1</h1>
@@ -66,6 +71,22 @@ function App() {
                             Lately I find my Inn covered in slime in the mornings and to be honest, it's quite a hassle to clean it off every day. The village elders suspect that we have a snail problem, and I'd like you to get rid of them for me. Be aware though, snails are super fast! The only way you're going to get them to slow down is if you can get them to eat some lettuce. Maybe the market vendors outside can sell you some?
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <div className="LevelLayout">
+                    <div className="Form" id="SQLForm" aria-label="SQL Form">
+                        <div className="QueryHeader">
+                            <label className="FieldLabel">SQL Query</label>
+                            <button onClick={getInventory}>Get Inventory</button>
+                            <button id="Execute" className="ExecuteButton" onClick={execQuery}>Execute ►</button>
+                        </div>
+                        <textarea id="SQLQueryField"></textarea>
+                    </div>
+
+                    <div className="ResultDisplay">
+                        <label className="DisplayLabel">Result</label>
+                        <div className="Result" id="ResultArea">Hello there</div>
                     </div>
                 </div>
             </div>

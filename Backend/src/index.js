@@ -32,6 +32,17 @@ app.get('/inventory', (req, res) => {
   })
 })
 
+app.post('/query', async (req, res) => {
+  const query = req.body.query;
+  database.runQuery(query)
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(err => {
+        res.status(500).send(err);
+      })
+})
+
 app.get('/inventory/add', async (req, res) => {
   const inputValue = req.body.inputValue;
   try {
