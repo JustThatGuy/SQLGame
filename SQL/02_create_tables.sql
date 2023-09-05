@@ -170,8 +170,11 @@ ALTER TABLE game.my_solution OWNER TO postgres;
 
 CREATE TABLE game.quest (
     id integer NOT NULL,
-    person_id integer,
-    quest character varying(5000)
+	name character varying(20) NULL,
+	story character varying(5000) null,
+	goal character varying(200) null,
+	info character varying(5000) NULL,
+	person_id integer NULL
 );
 
 
