@@ -1,9 +1,15 @@
 import '../css/App.css';
 import TabMenu from '../components/TabMenu';
+import Table from '../components/Table';
+import data from "../data.json"
 
 function App() {
 
     const backenduri = 'http://localhost:8080'
+
+    const getHeadings = () => {
+        return Object.keys(data[0]);
+    }
 
     // parse query to backend
     const execQuery = async () => {
@@ -24,7 +30,7 @@ function App() {
         }
     };
 
-    // inventory request funtion
+    // inventory request function
     const getInventory = async () => {
         const res = await fetch(`${backenduri}/inventory`, {
             method: 'GET'
@@ -109,11 +115,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <table>
-                                <tr><th>Row</th><th>ID</th><th>Name</th><th>Description</th></tr>
-                                <tr><td>1</td><td>1</td><td>Longsword</td><td>A legendary longsword</td></tr>
-                                <tr><td>2</td><td>12</td><td>Rope</td><td>Rope with a magical touch.</td></tr>
-                            </table>
+                            <Table theadData={getHeadings()} tbodyData={data}/>
                         </div>
                     </div>
                 </div>
