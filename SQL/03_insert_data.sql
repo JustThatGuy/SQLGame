@@ -134,7 +134,16 @@ COPY game.location (id, name, location_type, location_parent_id) FROM stdin;
 --
 
 COPY game.monster (id, item, strength, weakness) FROM stdin;
+1	Scary clown	\N	\N
+2	Mighty germ	\N	\N
+3	Giant skunk	\N	\N
+5	Were turtle	\N	\N
+7	Psycho squirrel	\N	\N
+8	Stoned golem	\N	\N
 9	Horrid harpies	\N	\N
+10	Teddy bear	\N	\N
+12	Flying frogs	\N	\N
+20	Insurance salesman	\N	\N
 25	Snails on speed	fast	local lettuce
 \.
 
