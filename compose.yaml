@@ -50,4 +50,9 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./SQL:/docker-entrypoint-initdb.d/
+      - ./SQL/01_create_schema.sql:/docker-entrypoint-initdb.d/01_create_schema.sql
+      - ./SQL/02_create_tables.sql:/docker-entrypoint-initdb.d/02_create_tables.sql
+      - ./SQL/03_insert_data.sql:/docker-entrypoint-initdb.d/03_insert_data.sql
+      - ./SQL/04_set_constraints.sql:/docker-entrypoint-initdb.d/04_set_constraints.sql
+      - ./SQL/05_create_functions.sql:/docker-entrypoint-initdb.d/05_create_functions.sql
+      - ./SQL/06_set_userprivileges.sql:/docker-entrypoint-initdb.d/06_set_userprivileges.sql

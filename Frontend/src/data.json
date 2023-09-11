@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "item": "Longsword",
+    "explanation": "A legendary longsword",
+    "origin": "bonus"
+  },
+  {
+    "id": 2,
+    "item": "Rope",
+    "explanation": "Rope with a magical touch.",
+    "origin": "beach"
+  }
+]
