@@ -27,6 +27,10 @@
   text-decoration: none;
 }
 
+.TabLink:hover {
+    background-color: var(--c-secondary);
+}
+
 .TabLink[aria-selected='true'] {
   background-color: var(--c-action);
   color: var(--c-secondary);

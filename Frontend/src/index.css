@@ -13,7 +13,7 @@
 
 body {
   background-color: var(--c-background);
-  font-size: 14px;
+  font-size: 1vw;
   line-height: 20px;
   font-family: Helvetica, sans-serif;
   margin: 0;
