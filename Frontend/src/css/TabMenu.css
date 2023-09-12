@@ -21,7 +21,7 @@
   cursor: pointer;
   display: inline-block;
   max-width: 100%;
-  padding: 8px  24px;
+  padding: 12px 24px;
   text-align: center;
   color: var(--c-secondarybg);
   text-decoration: none;

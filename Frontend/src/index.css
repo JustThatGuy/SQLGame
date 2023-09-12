@@ -9,11 +9,18 @@
   --c-action-h: #d063ff;
   --c-transparent: rgba(255, 255, 255, 0);
   --c-shadow: rgba(0, 0, 0, 0.2);
+
+  --fs-h1: 2vw;
+  --fs-h2: 1.75vw;
+  --fs-label: 1.5vw;
+  --fs-quest: 1.4vw;
+  --fs-p: 0.9vw;
+  --fs-pl: 1.1vw;
 }
 
 body {
   background-color: var(--c-background);
-  font-size: 1vw;
+  font-size: var(--fs-p);
   line-height: 20px;
   font-family: Helvetica, sans-serif;
   margin: 0;

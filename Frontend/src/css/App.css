@@ -49,7 +49,7 @@
 }
 
 .LevelHeader {
-  font-size: 28px;
+  font-size: var(--fs-h1);
   margin: 0.5em 0 0.67em 0;
   box-sizing: border-box;
   display: block;
@@ -75,14 +75,14 @@
   background-image: linear-gradient(45deg, var(--c-secondary), var(--c-primary));
   border-left: 5px solid var(--c-action-h);
   border-radius: 12px;
-  font-size: 16px;
+  font-size: var(--fs-pl);
   box-shadow: 1px -1px 5px var(--c-shadow);
   margin: 0 0 10px 0;
   padding: 10px 16px;
 }
 
 .BoldText {
-  font-size: 21px;
+  font-size: var(--fs-quest);
   font-weight: bold;
 }
 
@@ -129,7 +129,7 @@
 .FieldLabel {
   color: var(--c-primary);
   font-weight: 700;
-  font-size: 18;
+  font-size: var(--fs-label);
   line-height: 20px;
 }
 
@@ -142,7 +142,7 @@
   color: var(--c-secondary);
   cursor: pointer;
   display: block;
-  font-size: 14px;
+  font-size: var(--fs-p);
   font-weight: 400;
   height: 24px;
   line-height: 20px;
@@ -156,7 +156,7 @@
 }
 
 .FieldLabel {
-  font-size: 18px;
+  font-size: var(--fs-label);
 }
 
 #SQLQueryField {
@@ -166,7 +166,7 @@
   border-width: 1px;
   color: var(--c-secondary);
   display: block;
-  font-size: 14px;
+  font-size: var(--fs-p);
   font-weight: 400;
   line-height: 20px;
   height: 90%;
@@ -182,7 +182,7 @@
 .DisplayLabel {
   color: var(--c-primary);
   display: block;
-  font-size: 18px;
+  font-size: var(--fs-label);
   font-weight: 700;
   line-height: 20px;
   margin-bottom: 8px;
@@ -193,7 +193,7 @@
   border-radius: 8px;
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
   color: var(--c-secondary);
-  font-size: 14px;
+  font-size: var(--fs-p);
   height: 94%;
   padding: 16px;
 }
@@ -204,6 +204,7 @@
   display: block;
   font-family: 'Roboto Mono', monospace;
   width: 100%;
+  height: 500px;
 }
 
 .Result th {
