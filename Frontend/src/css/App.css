@@ -1,6 +1,6 @@
 .Screen {
   border: 1px solid var(--c-primary);
-  border-radius: 8px;
+  border-radius: var(--b-rad);
   column-gap: 20px;
   row-gap: 20px;
   display: grid;
@@ -109,7 +109,7 @@
   grid-template-columns: 3fr;
   grid-auto-columns: 1fr;
   justify-content: center;
-  align-self: end;
+  align-self: center;
   grid-column: 1;
   grid-row: 1;
 }
@@ -162,7 +162,7 @@
 #SQLQueryField {
   background-color: var(--c-transparent);
   border-color: var(--c-primary);
-  border-radius: 8px;
+  border-radius: var(--b-rad);
   border-width: 1px;
   color: var(--c-secondary);
   display: block;
@@ -190,7 +190,7 @@
 
 .Result {
   background-color: var(--c-secondarybg);
-  border-radius: 8px;
+  border-radius: var(--b-rad);
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
   color: var(--c-secondary);
   font-size: var(--fs-p);
@@ -200,7 +200,7 @@
 
 .Result table {
   border-collapse: collapse;
-  border-radius: 8px;
+  border-radius: var(--b-rad);
   display: block;
   font-family: 'Roboto Mono', monospace;
   width: 100%;

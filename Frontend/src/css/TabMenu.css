@@ -1,12 +1,11 @@
 .TabCell {
   flex-direction: column;
   grid-area: span 1 / span 1 / span 1 / span 1;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .Tabs {
   height: 100%;
-  position: relative;
 }
 
 .TabList {
@@ -42,23 +41,22 @@
 
 .TabPane {
   background-color: var(--c-secondarybg);
-  border-radius: 8px;
+  border-radius: var(--b-rad);
   display: block;
-  height: 96%;
   overflow: hidden;
-  padding: 16px;
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
 }
 
 .TabContent {
-  height: 100%;
-  width: 100%;
-  border-radius: 8px;
+  height: 77vh;
+  width: 90%;
+  border-radius: var(--b-rad);
+  margin: 5% auto;
 }
 
 .Map {
   object-fit: cover;
   min-height: 100%;
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: var(--b-rad);
 }

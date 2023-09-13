@@ -83,8 +83,6 @@ function App() {
             </div>
 
             <div className="OperationsCell">
-                {questInfo}
-
                 <div className="LevelLayout">
                     <div className="Form" id="SQLForm" aria-label="SQL Form">
                         <div className="QueryHeader">
@@ -101,6 +99,8 @@ function App() {
                         </div>
                     </div>
                 </div>
+
+                {questInfo}
             </div>
         </div>
     );
