@@ -5,10 +5,9 @@ import Table from '../components/Table';
 import data from "../data.json"
 
 import { questInfo } from "../components/QuestInfo"
+import { backenduri } from '..';
 
 function App() {
-
-    const backenduri = 'http://localhost:8080'
 
     const getHeadings = () => {
         return Object.keys(data[0]);
