@@ -21,6 +21,7 @@
 
 /* main content */
 .OperationsCell {
+  height: 100%;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
@@ -31,7 +32,6 @@
   grid-template-columns: auto;
   grid-template-rows: auto 1fr;
   height: 100%;
-  margin-bottom: 12px;
   padding: 0;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
@@ -50,7 +50,7 @@
 
 .LevelHeader {
   font-size: var(--fs-h1);
-  margin: 0.5em 0 0.67em 0;
+  margin: 0 0 0.67em 0;
   box-sizing: border-box;
   display: block;
 }
@@ -101,7 +101,7 @@
 
 /* Text fields */
 .LevelLayout {
-  height: 96%;
+  height: 100%;
   width: 100%;
   grid-row-gap: 8px;
   grid-column-gap: 20px;

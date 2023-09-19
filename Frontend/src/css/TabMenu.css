@@ -48,10 +48,10 @@
 }
 
 .TabContent {
-  height: 77vh;
-  width: 90%;
+  height: 80vh;
+  width: 94%;
   border-radius: var(--b-rad);
-  margin: 5% auto;
+  margin: 3% auto;
 }
 
 .Map {
