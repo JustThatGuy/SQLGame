@@ -9,12 +9,20 @@
   --c-action-h: #d063ff;
   --c-transparent: rgba(255, 255, 255, 0);
   --c-shadow: rgba(0, 0, 0, 0.2);
+
+  --fs-h1: 2vw;
+  --fs-h2: 1.75vw;
+  --fs-label: 1.5vw;
+  --fs-quest: 1.2vw;
+  --fs-p: 0.9vw;
+  --fs-pl: 1.05vw;
+
+  --b-rad: 8px;
 }
 
 body {
   background-color: var(--c-background);
-  font-size: 14px;
-  line-height: 20px;
+  font-size: var(--fs-p);
   font-family: Helvetica, sans-serif;
   margin: 0;
 }
