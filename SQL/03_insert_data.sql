@@ -26,7 +26,7 @@ SET row_security = off;
 --
 
 COPY game.inventory (id, item, origin, username) FROM stdin;
-1	driftwood	beach	postgres
+13	map	beach	sqlgamer
 \.
 
 
@@ -49,6 +49,7 @@ COPY game.item (id, person_id, item, explanation, bonus_flag) FROM stdin;
 10	\N	whisky	Aged single malt scottish whisky. Can be used to clean wounds, numb pain and act as liquid courage.	N
 11	\N	rum	\N	N
 12	\N	bag of coins	\N	N
+13	\N	map	Intriguing piece of paper adorned with a mysterious -X-
 100	4	iris	Noble flower, symbolises faith, courage, valour, hope and wisdom	N
 101	4	rose	Symbolises love, affection and beauty.	N
 102	4	lily	Tall, majestic and resilient.	N
