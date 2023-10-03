@@ -1,7 +1,9 @@
-import { useState } from 'react';
 import '../css/TabMenu.css';
+import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
 import InventoryItem from './InventoryItem';
+
 import { backenduri } from '..';
 
 export default () => {

@@ -1,0 +1,29 @@
+.Item {
+    background-color: var(--c-secondary);
+    border-radius: var(--b-rad);
+    color: var(--c-secondarybg);
+    display: inline-block;
+    width: 100%;
+    margin: 4px auto;
+  }
+  
+  .ItemText {
+    display: inline-block;
+    margin: 4% auto;
+    align-self: center;
+  }
+  
+  .ItemID {
+    width: 10%;
+    padding-left: 4%;
+  }
+  
+  .ItemName {
+    width: 45%;
+  }
+  
+  .ItemOrigin {
+    width: 45%;
+    text-align: end;
+    padding-right: 4%;
+  }

@@ -1,3 +1,5 @@
+import '../css/InventoryItem.css';
+
 export default function InventoryItem({ item }) {
     return (
       <div className='Item' key={item.id}>
@@ -6,4 +8,4 @@ export default function InventoryItem({ item }) {
         <p className='ItemOrigin ItemText'>{item.origin}</p>
       </div>
     );
-  }
+}
