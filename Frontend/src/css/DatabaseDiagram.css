@@ -1,6 +1,31 @@
 .DatabaseDiagram {
     width: 60%;
-    height: 500px;
+    height: 40%;
     position: absolute;
+    bottom: 4.1vh;
+    left: 20%;
+    z-index: 1;
+    background: none;
+}
+
+.DrawerButton {
+    background-color: var(--c-red);
+    border: none;
+    border-radius: 8px 8px 0 0;
+    color: var(--c-secondarybg);
+    display: flex;
+    font-size: var(--fs-p);
     margin: auto;
+    padding: 12px 16px;
+    position: relative;
+    transition-duration: 0.1s;
+    text-decoration: none;
+}
+
+.DiagramArea {
+    background-color: var(--c-secondarybg);
+    border-radius: 8px 8px 0 0;
+    height: 100%;
+    padding: 16px;
+    width: 100%;
 }
