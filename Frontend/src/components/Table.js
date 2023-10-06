@@ -23,10 +23,11 @@
 
 
 import React, { Component } from 'react';
+import data from '../data/data.json'
 
-class Table extends Component {
+export default class Table extends Component {
   render() {
-    const { data } = this.props;
+    //const { data } = this.props;
     const columns = Object.keys(data[0]);
     return (
       <table>

@@ -2,7 +2,7 @@ import '../css/App.css';
 
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
-import data from "../data.json"
+import data from "../data/data.json"
 
 import { questInfo } from "../components/QuestInfo"
 import { backenduri } from '..';
@@ -54,6 +54,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
+                            <Table />
                             {/* <Table theadData={getHeadings()} tbodyData={data}/> */}
                         </div>
                     </div>
