@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    border-radius: var(--b-rad);
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+}
+
+th {
+    height: 3vh;
+    border-right: 1px solid var(--c-secondary);
+    border-bottom: 1px solid var(--c-secondary);
+    font-weight: 700;
+    padding: 16px 8px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+th:last-child {
+    border-right: none;
+    margin-left: 0;
+}
+
+td {
+    border-right: 1px solid var(--c-secondary);
+    padding: 4px 8px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+td:last-child {
+    border: none;
+}

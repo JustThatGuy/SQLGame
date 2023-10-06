@@ -56,7 +56,6 @@ function App() {
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
                             <Table />
-                            {/* <Table theadData={getHeadings()} tbodyData={data}/> */}
                         </div>
                     </div>
                 </div>
@@ -64,7 +63,7 @@ function App() {
                 {questInfo}
             </div>
 
-            <DatabaseDiagram />
+            {/* <DatabaseDiagram /> */}
         </div>
     );
 };
