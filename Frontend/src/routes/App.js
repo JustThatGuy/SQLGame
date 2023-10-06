@@ -3,6 +3,7 @@ import '../css/App.css';
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
 import data from "../data/data.json"
+import DatabaseDiagram from '../components/DatabaseDiagram';
 
 import { questInfo } from "../components/QuestInfo"
 import { backenduri } from '..';
@@ -33,12 +34,12 @@ function App() {
     };
 
 
-    
+
     // Build the screen
     return (
         <div className="Screen">
             <div className="TabCell">
-                <TabMenu></TabMenu>
+                <TabMenu />
             </div>
 
             <div className="OperationsCell">
@@ -62,6 +63,8 @@ function App() {
 
                 {questInfo}
             </div>
+
+            <DatabaseDiagram />
         </div>
     );
 };
