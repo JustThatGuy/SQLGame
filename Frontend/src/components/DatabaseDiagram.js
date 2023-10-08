@@ -8,7 +8,7 @@ export default () => {
         <button className='DrawerButton'>Database</button>
         <div className='DiagramArea'>
             <Draggable>
-                <img src='DatabaseDiagram.png' className='DBDimg' />
+                <img src='../img/DatabaseDiagram.png' className='DBDimg'/>
             </Draggable>
         </div>
     </div>

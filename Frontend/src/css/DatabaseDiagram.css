@@ -28,4 +28,9 @@
     height: 100%;
     padding: 16px;
     width: 100%;
+    overflow: hidden;
+}
+
+.DBDimg {
+    mix-blend-mode: multiply;
 }
