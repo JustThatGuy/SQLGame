@@ -19,6 +19,7 @@
   border-radius: 8px 8px 0px 0px;
   cursor: pointer;
   display: inline-block;
+  font-size: .9em;
   max-width: 100%;
   padding: 12px 24px;
   text-align: center;
@@ -31,12 +32,8 @@
 }
 
 .TabLink[aria-selected='true'] {
-  background-color: var(--c-action);
-  color: var(--c-secondary);
-}
-
-.TabLink[aria-selected='true']:hover {
   background-color: var(--c-action-h);
+  color: var(--c-secondary);
 }
 
 .TabPane {
@@ -48,7 +45,7 @@
 }
 
 .TabContent {
-  height: 80vh;
+  height: 82vh;
   width: 94%;
   border-radius: var(--b-rad);
   margin: 3% auto;

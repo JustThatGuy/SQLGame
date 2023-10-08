@@ -10,10 +10,6 @@ import { backenduri } from '..';
 
 function App() {
 
-    const getHeadings = () => {
-        return Object.keys(data[0]);
-    }
-
     // parse query to backend
     const execQuery = async () => {
         const query = document.getElementById("SQLQueryField").value;
@@ -63,7 +59,7 @@ function App() {
                 {questInfo}
             </div>
 
-            {/* <DatabaseDiagram /> */}
+            <DatabaseDiagram />
         </div>
     );
 };

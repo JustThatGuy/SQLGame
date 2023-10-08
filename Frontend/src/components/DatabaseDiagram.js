@@ -1,4 +1,5 @@
 import '../css/DatabaseDiagram.css';
+import React from 'react';
 import Draggable from 'react-draggable';
 
 export default () => {
