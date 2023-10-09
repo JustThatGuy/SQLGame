@@ -1,11 +1,13 @@
 .DatabaseDiagram {
     width: 60%;
-    height: 40%;
+    height: 0%;
     position: absolute;
     bottom: 4.1vh;
     left: 20%;
     z-index: 1;
     background: none;
+    transition: height 200ms;
+    -webkit-transition: height 200ms;
 }
 
 .DrawerButton {
@@ -20,6 +22,7 @@
     position: relative;
     transition-duration: 0.1s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .DiagramArea {
@@ -31,6 +34,9 @@
     overflow: hidden;
 }
 
+.DiagramArea
+
 .DBDimg {
-    mix-blend-mode: multiply;
+    filter: invert(1);
+    mix-blend-mode: lighten;
 }
