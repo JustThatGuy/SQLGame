@@ -49,6 +49,7 @@
   height: 80vh;
   width: 94%;
   border-radius: var(--b-rad);
+  border: 1px solid var(--c-primary);
   margin: 3% auto;
 }
 

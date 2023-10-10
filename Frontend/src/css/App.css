@@ -41,7 +41,7 @@
 }
 
 .Form {
-  height: 49%;
+  height: 42vh;
   color: var(--c-secondarybg);
   margin-bottom: 16px;
 }
@@ -102,7 +102,7 @@
 }
 
 .ResultDisplay {
-  height: 49%;
+  height: 42vh;;
 }
 
 .DisplayLabel {
@@ -122,6 +122,9 @@
   font-size: var(--fs-p);
   height: 92%;
   padding: 8px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Quest background info */

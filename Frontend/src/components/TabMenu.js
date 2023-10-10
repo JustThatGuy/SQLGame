@@ -22,7 +22,7 @@ export default () => {
     }
   }
 
-  function TabWidth() {
+  function tabWidth() {
     var Tabs = document.getElementsByClassName('TabLink');
     var TabWidth = 100/Tabs.length;
     for (var i=0;i<Tabs.length;i++) {
@@ -31,7 +31,7 @@ export default () => {
   }
 
   return (
-    <Tabs className="Tabs" onLoad={TabWidth}>
+    <Tabs className="Tabs" onLoad={tabWidth}>
       <TabList className="TabList">
         <Tab className="TabLink">Map</Tab>
         <Tab className="TabLink">Inventory</Tab>
