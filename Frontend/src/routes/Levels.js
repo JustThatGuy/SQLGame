@@ -1,32 +1,9 @@
 import '../css/Levels.css';
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import levels from '../data/levels.json'
 
 function Levels() {
-
-    // Define levels for testing
-    const levels = [{
-        id: 0,
-        name: 'Level One',
-        desc: 'Small beginnings',
-        image: '../img/level1.png'
-    }, {
-        id: 1,
-        name: 'Level Two',
-        desc: 'The first tracks',
-        image: '../img/level2.png'
-    }, {
-        id: 2,
-        name: 'Level Three',
-        desc: 'Dungeon crawling is not for weaklings',
-        image: '../img/level3.png'
-    }, {
-        id: 3,
-        name: 'Level Four',
-        desc: 'Where ends meet',
-        image: '../img/level4.png'
-    }];
-    
     // Map levels to actual cards
     const levelCards = levels.map(level => 
         <Link to=":level1" className="Card" key={level.id}>

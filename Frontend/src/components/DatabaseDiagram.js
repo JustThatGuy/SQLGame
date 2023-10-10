@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 
 export default () => {
     function toggleDiagram() {
-        const diagramArea = document.getElementById('DiagramArea');
+        const diagramArea = document.getElementById('DiagramDrawer');
         if (diagramArea.style.height != "0%") {
             diagramArea.style.height = "0%";
         } else {
@@ -13,11 +13,11 @@ export default () => {
     }
 
     return (
-    <div className='DatabaseDiagram' id="DiagramArea">
+    <div className='DatabaseDiagramDrawer' id="DiagramDrawer">
         <button className='DrawerButton' onClick={toggleDiagram}>Database</button>
         <div className='DiagramArea'>
             <Draggable>
-                <img src='../img/DatabaseDiagram.png' className='DBDimg'/>
+                <div className='DBDImg'></div>
             </Draggable>
         </div>
     </div>

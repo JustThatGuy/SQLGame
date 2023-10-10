@@ -2,6 +2,7 @@
   flex-direction: column;
   grid-area: span 1 / span 1 / span 1 / span 1;
   justify-content: center;
+  height: 88vh;
 }
 
 .Tabs {
@@ -9,26 +10,26 @@
 }
 
 .TabList {
-    width: 100%;
-    margin: 0;
-    margin-inline: 0;
+  width: 100%;
+  margin: 0;
+  margin-inline: 0;
 }
 
 .TabLink {
   background-color: var(--c-primary);
   border-radius: 8px 8px 0px 0px;
+  color: var(--c-secondarybg);
   cursor: pointer;
   display: inline-block;
-  font-size: .9em;
+  font-size: var(--fs-p);
   max-width: 100%;
-  padding: 12px 24px;
+  padding: .8em 2.2em;
   text-align: center;
-  color: var(--c-secondarybg);
   text-decoration: none;
 }
 
 .TabLink:hover {
-    background-color: var(--c-secondary);
+  background-color: var(--c-secondary);
 }
 
 .TabLink[aria-selected='true'] {
@@ -45,7 +46,7 @@
 }
 
 .TabContent {
-  height: 82vh;
+  height: 80vh;
   width: 94%;
   border-radius: var(--b-rad);
   margin: 3% auto;

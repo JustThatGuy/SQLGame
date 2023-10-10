@@ -1,10 +1,8 @@
 import '../css/App.css';
-
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
 import data from "../data/data.json"
 import DatabaseDiagram from '../components/DatabaseDiagram';
-
 import { questInfo } from "../components/QuestInfo"
 import { backenduri } from '..';
 
@@ -56,7 +54,7 @@ function App() {
                     </div>
                 </div>
 
-                {questInfo}
+                {questInfo[0]}
             </div>
 
             <DatabaseDiagram />

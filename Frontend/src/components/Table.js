@@ -1,7 +1,6 @@
+import '../css/Table.css'
 import React, { Component } from 'react';
 import data from '../data/data.json'
-
-import '../css/Table.css'
 
 export class Table extends Component {
   render() {

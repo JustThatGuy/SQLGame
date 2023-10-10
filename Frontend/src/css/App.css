@@ -21,7 +21,7 @@
 
 /* main content */
 .OperationsCell {
-  height: 100%;
+  height: 88vh;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;

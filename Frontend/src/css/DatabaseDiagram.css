@@ -1,9 +1,9 @@
-.DatabaseDiagram {
-    width: 60%;
+.DatabaseDiagramDrawer {
+    width: 70%;
     height: 0%;
     position: absolute;
     bottom: 4.1vh;
-    left: 20%;
+    left: 15%;
     z-index: 1;
     background: none;
     transition: height 200ms;
@@ -34,9 +34,13 @@
     overflow: hidden;
 }
 
-.DiagramArea
-
-.DBDimg {
+.DBDImg {
+    background-image: url('../img/DatabaseDiagram.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     filter: invert(1);
-    mix-blend-mode: lighten;
+    mix-blend-mode:lighten ;
+    width: 561px;
+    height: 794px;
 }

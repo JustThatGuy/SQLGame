@@ -1,10 +1,8 @@
 import '../css/TabMenu.css';
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
-import InventoryItem from './InventoryItem';
-
 import { backenduri } from '..';
+import InventoryItem from './InventoryItem';
 
 export default () => {
   const [inventory, setInventory] = useState ([]);

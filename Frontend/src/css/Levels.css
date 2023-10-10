@@ -29,6 +29,12 @@
     margin: 0;
     padding: 0;
     overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.LevelList::-webkit-scrollbar {
+    display: none;
 }
 
 .Card {
@@ -39,10 +45,8 @@
     display: grid;
     float: left;
     grid-template-rows: 1fr 0.5fr;
-    min-height: 30%;
-    max-height: 35%;
-    min-width: 42%;
-    max-width: 50%;
+    height: 75vh;
+    width: 100%;
     margin: 8px;
     transition-duration: 0.1s;
     text-decoration: none;
@@ -68,7 +72,7 @@
     object-fit: cover;
     border-radius: var(--b-rad);
     height: 100%;
-    width: 100%;
+    width: 30vw;
 }
 
 .LevelCardDescription {
