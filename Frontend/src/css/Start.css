@@ -42,7 +42,7 @@
     border-radius: 64px;
     color: var(--c-secondary);
     font-size: var(--fs-pl);
-    padding: 16px 64px;
+    padding: var(--p-2x) var(--p-4x);
     transition-duration: 0.1s;
     text-decoration: none;
 }

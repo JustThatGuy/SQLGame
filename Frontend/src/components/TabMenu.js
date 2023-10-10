@@ -1,4 +1,5 @@
 import '../css/TabMenu.css';
+
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { backenduri } from '..';
@@ -21,13 +22,22 @@ export default () => {
     }
   }
 
+  function TabWidth() {
+    var Tabs = document.getElementsByClassName('TabLink');
+    var TabWidth = 100/Tabs.length;
+    for (var i=0;i<Tabs.length;i++) {
+      Tabs[i].style.width = TabWidth + "%"
+    }
+  }
+
   return (
-    <Tabs className="Tabs">
+    <Tabs className="Tabs" onLoad={TabWidth}>
       <TabList className="TabList">
         <Tab className="TabLink">Map</Tab>
         <Tab className="TabLink">Inventory</Tab>
         <Tab className="TabLink">Locations</Tab>
         <Tab className="TabLink">People</Tab>
+        <Tab className="TabLink">Hints</Tab>
       </TabList>
 
       <TabPanel className='TabPane'>

@@ -11,14 +11,28 @@
   --c-shadow: rgba(0, 0, 0, 0.2);
   --c-red: #ff6542;
 
-  --fs-h1: 2vw;
-  --fs-h2: 1.75vw;
-  --fs-label: 1.5vw;
-  --fs-quest: 1.2vw;
-  --fs-p: 0.9vw;
-  --fs-pl: 1.05vw;
+  --fs-h1: 2.488rem;
+  --fs-h2: 2.074rem;
+  --fs-label: 1.728rem;
+  --fs-quest: 1.44rem;
+  --fs-pl: 1.2rem;
+  --fs-p: 1rem;
 
   --b-rad: 8px;
+
+  --p-1x: 0.5rem;
+  --p-1-5x: 0.75rem;
+  --p-2x: 1rem;
+  --p-3x: 1.5rem;
+  --p-4x: 4rem;
+  --p-5x: 5rem;
+
+  --m-1x: 0.5rem;
+  --m-1-5x: 0.75rem;
+  --m-2x: 1rem;
+  --m-3x: 1.5rem;
+  --m-4x: 4rem;
+  --m-5x: 5rem;
 }
 
 body {

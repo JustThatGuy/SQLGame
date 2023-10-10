@@ -17,8 +17,6 @@
   background-color: var(--c-background);
 }
 
-
-
 /* main content */
 .OperationsCell {
   height: 88vh;
@@ -27,8 +25,7 @@
   grid-column-gap: 20px;
 }
 
-
-/* Text fields */
+/* Query */
 .LevelLayout {
   height: 100%;
   width: 100%;

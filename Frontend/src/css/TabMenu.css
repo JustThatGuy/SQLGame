@@ -22,8 +22,8 @@
   cursor: pointer;
   display: inline-block;
   font-size: var(--fs-p);
-  max-width: 100%;
-  padding: .8em 2.2em;
+  width: calc(100%/5);
+  padding: .8em 0;
   text-align: center;
   text-decoration: none;
 }

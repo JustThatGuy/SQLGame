@@ -1,4 +1,5 @@
 import '../css/App.css';
+
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
 import data from "../data/data.json"
