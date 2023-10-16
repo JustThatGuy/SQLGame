@@ -21,12 +21,12 @@ function App() {
                 body: JSON.stringify({
                     query: query
                 })
-                
             });
             //document.getElementById("ResultArea").innerText = await res.text();
-            const tableData = await res.text();
-            console.log(tableData);
-            document.getElementById("ResultArea").innerHTML = <Table data={res.json()} />;
+            //const queryRes = await res.text();
+            //console.log(queryRes);
+            const tableData = JSON.parse({res});
+            document.getElementById("ResultArea").innerHTML = <Table data={tableData} />;
         } else {
             document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
         }
