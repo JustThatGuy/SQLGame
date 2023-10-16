@@ -34,13 +34,14 @@
     overflow: hidden;
 }
 
-.DBDImg {
+#DBDImg {
     background-image: url('../img/DatabaseDiagram.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    display: block;
+    width: 150%;
+    height: 150%;
     filter: invert(1);
     mix-blend-mode:lighten ;
-    width: 561px;
-    height: 794px;
-}
+}   

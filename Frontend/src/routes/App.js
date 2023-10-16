@@ -21,8 +21,12 @@ function App() {
                 body: JSON.stringify({
                     query: query
                 })
+                
             });
-            document.getElementById("ResultArea").innerText = await res.text();
+            //document.getElementById("ResultArea").innerText = await res.text();
+            const tableData = await res.text();
+            console.log(tableData);
+            document.getElementById("ResultArea").innerHTML = <Table data={res.json()} />;
         } else {
             document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
         }
@@ -50,7 +54,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <Table />
+                            <Table data={data} />
                         </div>
                     </div>
                 </div>

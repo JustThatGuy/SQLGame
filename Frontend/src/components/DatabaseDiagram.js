@@ -18,7 +18,7 @@ export default () => {
         <button className='DrawerButton' onClick={toggleDiagram}>Database</button>
         <div className='DiagramArea'>
             <Draggable>
-                <div className='DBDImg'></div>
+                <div id='DBDImg' />
             </Draggable>
         </div>
     </div>
