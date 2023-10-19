@@ -2,6 +2,7 @@ import '../css/TabMenu.css';
 
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
 import { backenduri } from '..';
 import InventoryItem from './InventoryItem';
 
@@ -34,7 +35,7 @@ export default () => {
     <Tabs className="Tabs" onLoad={tabWidth}>
       <TabList className="TabList">
         <Tab className="TabLink">Map</Tab>
-        <Tab className="TabLink">Inventory</Tab>
+        <Tab className="TabLink" onClick={getInventory}>Inventory</Tab>
         <Tab className="TabLink">Locations</Tab>
         <Tab className="TabLink">People</Tab>
       </TabList>
@@ -51,7 +52,6 @@ export default () => {
               <InventoryItem key={item.id} item={item} />
             ))}
           </ul>
-          <button className='GetInventoryButton' onClick={getInventory}>Get Inventory</button>
         </div>
       </TabPanel>
       <TabPanel className='TabPane'>

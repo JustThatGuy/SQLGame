@@ -23,10 +23,10 @@ function App() {
                 })
             });
             //document.getElementById("ResultArea").innerText = await res.text();
-            //const queryRes = await res.text();
-            //console.log(queryRes);
-            const tableData = JSON.parse({res});
-            document.getElementById("ResultArea").innerHTML = <Table data={tableData} />;
+            const queryRes = await res.text();
+            console.log(queryRes);
+            const tableData = JSON.parse(queryRes);
+            <Table data={tableData} />;
         } else {
             document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
         }
