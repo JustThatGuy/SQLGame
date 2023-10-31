@@ -36,8 +36,7 @@ export default () => {
       <TabList className="TabList">
         <Tab className="TabLink">Map</Tab>
         <Tab className="TabLink" onClick={getInventory}>Inventory</Tab>
-        <Tab className="TabLink">Locations</Tab>
-        <Tab className="TabLink">People</Tab>
+        <Tab className="TabLink">Hints</Tab>
       </TabList>
 
       <TabPanel className='TabPane'>
