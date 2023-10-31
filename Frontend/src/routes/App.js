@@ -1,7 +1,9 @@
 import '../css/App.css';
 
+import { useState } from "react"
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
+import BasicTable from '../components/BasicTable';
 import data from "../data/data.json"
 import DatabaseDiagram from '../components/DatabaseDiagram';
 import { questInfo } from "../components/QuestInfo"
@@ -16,7 +18,7 @@ import { backenduri } from '..';
 // });
 
 function App() {
-
+  const [queryResult, setQueryResult] = useState (data)
     // parse query to backend
     const execQuery = async () => {
         const query = document.getElementById("SQLQueryField").value;
@@ -30,9 +32,14 @@ function App() {
                     query: query
                 })
             });
-            //document.getElementById("ResultArea").innerText = await res.text();
-            const tableData = JSON.parse(await res.text());
-            <Table data={tableData} />;
+            if (!res.ok) {
+              document.getElementById("ResultArea").innerText = await res.text();
+            }
+            var result = await res.json();
+            setQueryResult(result);
+            //document.getElementById("ResultArea").innerText = setQueryResult(result);
+
+
         } else {
             document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
         }
@@ -60,7 +67,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <Table data={data} />
+                            <BasicTable jsonData={queryResult}/>
                         </div>
                     </div>
                 </div>
