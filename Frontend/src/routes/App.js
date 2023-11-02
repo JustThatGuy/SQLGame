@@ -18,7 +18,9 @@ import { backenduri } from '..';
 // });
 
 function App() {
-  const [queryResult, setQueryResult] = useState (data)
+
+    const [queryResult, setQueryResult] = useState (data)
+
     // parse query to backend
     const execQuery = async () => {
         const query = document.getElementById("SQLQueryField").value;
@@ -32,13 +34,13 @@ function App() {
                     query: query
                 })
             });
-            if (!res.ok) {
-              document.getElementById("ResultArea").innerText = await res.text();
-            }
-            var result = await res.json();
-            setQueryResult(result);
-            //document.getElementById("ResultArea").innerText = setQueryResult(result);
 
+            if (res.ok) {
+                var result = await res.json();
+                setQueryResult(result);
+            } else {
+                document.getElementById("ResultArea").innerText = await res.text();
+            }
 
         } else {
             document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
@@ -67,7 +69,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <BasicTable jsonData={queryResult}/>
+                            <Table data={queryResult}/>
                         </div>
                     </div>
                 </div>
