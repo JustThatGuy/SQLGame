@@ -1,21 +1,12 @@
 import '../css/App.css';
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
-import BasicTable from '../components/BasicTable';
 import data from "../data/data.json"
 import DatabaseDiagram from '../components/DatabaseDiagram';
 import { questInfo } from "../components/QuestInfo"
 import { backenduri } from '..';
-
-// import { useState, useEffect } from 'react';
-
-// const [data, setTableData] = useState([]);
-
-// useEffect(() => {
-//   setTableData(data);
-// });
 
 function App() {
 
@@ -39,7 +30,9 @@ function App() {
                 var result = await res.json();
                 setQueryResult(result);
             } else {
-                document.getElementById("ResultArea").innerText = await res.text();
+                var error = await res.text();
+                useEffect(() => {document.getElementById("ResultArea").innerText = error});
+                //document.getElementById("ResultArea").innerText = await res.text();
             }
 
         } else {

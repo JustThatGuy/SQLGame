@@ -15,7 +15,7 @@ COPY . /src
 RUN npm install -g npm@latest \
     && rm -fr node_modules \
     && npm install -g serve \
-    && npm install \
+    && npm ci \
     && npm run build
 
 # Expose frontend

@@ -19,7 +19,8 @@ th {
 
 th:last-child {
     border-right: none;
-    width: 30%;
+    min-width: 30%;
+    max-width: 90%;
 }
 
 td {

@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "hint": "Find the greengrocer",
+      "desc": "Ladida",
+      "solution": "yes"
+    },
+    {
+      "id": 2,
+      "hint": "Find the local lettuce",
+      "desc": "Ladida",
+      "solution": "yes"
+    },
+    {
+      "id": 3,
+      "hint": "Add the item to your inventory",
+      "desc": "Ladida",
+      "solution": "yes"
+    },
+    {
+      "id": 4,
+      "hint": "Find the saltmine",
+      "desc": "Ladida",
+      "solution": "yes"
+    },
+    {
+      "id": 5,
+      "hint": "Find the monster with local lettuce as weakness"
+    },
+    {
+      "id": 6,
+      "hint": "Find the kill strategy"
+    },
+    {
+      "id": 7,
+      "hint": "Use the ids for location, monster and kill strategy to check the solution"
+    }
+  ]

@@ -1,5 +1,5 @@
 import '../css/Levels.css';
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import levels from '../data/levels.json'
 

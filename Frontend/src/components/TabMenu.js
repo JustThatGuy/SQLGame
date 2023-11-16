@@ -5,11 +5,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import { backenduri } from '..';
 import InventoryItem from './InventoryItem';
+import hints from "../data/hints.json"
+import HintItem from './HintItem';
 
 export default () => {
+  // inventory request funtion
   const [inventory, setInventory] = useState ([]);
 
-  // inventory request funtion
   const getInventory = async () => {
     const res = await fetch(`${backenduri}/inventory`, {
       method: 'GET'
@@ -54,10 +56,13 @@ export default () => {
         </div>
       </TabPanel>
       <TabPanel className='TabPane'>
-        <div className='TabContent'></div>
-      </TabPanel>
-      <TabPanel className='TabPane'>
-        <div className='TabContent'></div>
+        <div className='TabContent'>
+          <ul className="Hints" id='Hints'>
+            {hints.map((hints) => (
+              <HintItem key={hints.id} hint={hints} />
+            ))}
+          </ul>
+        </div>
       </TabPanel>
     </Tabs>
   );

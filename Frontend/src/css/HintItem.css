@@ -1,0 +1,27 @@
+.Hint {
+    background-color: var(--c-secondary);
+    border-radius: var(--b-rad);
+    color: var(--c-secondarybg);
+    display: inline-block;
+    width: 100%;
+    margin: 4px auto;
+  }
+  
+  .HintInner{
+    display: inline-block;
+    margin: 4% auto;
+    align-self: center;
+    height: 100px;
+    width: 100%;
+  }
+  
+  .HintDesc {
+    font-size: var(--fs-p);
+    color: white;
+  }
+
+  .HintSol {
+    background-color: var(--c-secondarybg);
+    color: var(--c-secondary);
+    padding: 8px 12px;
+  }
