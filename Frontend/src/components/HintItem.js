@@ -8,9 +8,9 @@ export default function HintItem({ hint }) {
   return (
     <Collapsible className="Hint" containerElementProps={hint.id} trigger={hint.title}>
       <div className='HintInner'>
-        <p className='HintDesc'>{hint.description}</p>
+        <p className='HintDesc'>{hint.desc}</p>
         <div className='HintSol'>
-          <p className="HintSolText" toggleData="ToggledOff">{hint.solution}</p>
+          <p className="HintSolText" toggleData="ToggledOff">{hint.sol}</p>
           <i className='HintSolHide'></i>
         </div>
       </div>
