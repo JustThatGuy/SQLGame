@@ -8,9 +8,9 @@ import DatabaseDiagram from '../components/DatabaseDiagram';
 import { questInfo } from "../components/QuestInfo"
 import { backenduri } from '..';
 
-function App() {
+export default function App() {
 
-    const [queryResult, setQueryResult] = useState (data)
+    const [queryResult, setQueryResult] = useState(data)
 
     // parse query to backend
     const execQuery = async () => {
@@ -31,7 +31,7 @@ function App() {
                 setQueryResult(result);
             } else {
                 var error = await res.text();
-                useEffect(() => {document.getElementById("ResultArea").innerText = error});
+                useEffect(() => { document.getElementById("ResultArea").innerText = error });
                 //document.getElementById("ResultArea").innerText = await res.text();
             }
 
@@ -62,7 +62,7 @@ function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <Table data={queryResult}/>
+                            <Table data={queryResult} />
                         </div>
                     </div>
                 </div>
@@ -74,5 +74,3 @@ function App() {
         </div>
     );
 };
-
-export default App;

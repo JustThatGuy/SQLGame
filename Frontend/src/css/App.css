@@ -122,7 +122,6 @@
   font-size: var(--fs-p);
   height: 92%;
   padding: 8px;
-  overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }

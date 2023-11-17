@@ -10,7 +10,7 @@ import HintItem from './HintItem';
 
 export default () => {
   // inventory request funtion
-  const [inventory, setInventory] = useState ([]);
+  const [inventory, setInventory] = useState([]);
 
   const getInventory = async () => {
     const res = await fetch(`${backenduri}/inventory`, {
@@ -27,8 +27,8 @@ export default () => {
 
   function tabWidth() {
     var Tabs = document.getElementsByClassName('TabLink');
-    var TabWidth = 100/Tabs.length;
-    for (var i=0;i<Tabs.length;i++) {
+    var TabWidth = 100 / Tabs.length;
+    for (var i = 0; i < Tabs.length; i++) {
       Tabs[i].style.width = TabWidth + "%"
     }
   }
