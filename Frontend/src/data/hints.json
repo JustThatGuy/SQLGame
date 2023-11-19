@@ -1,38 +1,44 @@
 [
-    {
-      "id": 1,
-      "title": "Find the greengrocer",
-      "desc": "Ladida",
-      "sol": "yes"
-    },
-    {
-      "id": 2,
-      "title": "Find the local lettuce",
-      "desc": "Ladida",
-      "sol": "yes"
-    },
-    {
-      "id": 3,
-      "title": "Add the item to your inventory",
-      "desc": "Ladida",
-      "sol": "yes"
-    },
-    {
-      "id": 4,
-      "title": "Find the saltmine",
-      "desc": "Ladida",
-      "sol": "yes"
-    },
-    {
-      "id": 5,
-      "title": "Find the monster with local lettuce as weakness"
-    },
-    {
-      "id": 6,
-      "title": "Find the kill strategy"
-    },
-    {
-      "id": 7,
-      "title": "Use the ids for location, monster and kill strategy to check the solution"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Find the greengrocer",
+    "desc": "First, check the database diagram for a table that has data on people. Then see if there is column that could contain the value 'greengrocer'. Finally remember the id, you will need it in subsequent queries.",
+    "sol": "select *\nfrom game.person\nwhere occupation = 'greengrocer';"
+  },
+  {
+    "id": 2,
+    "title": "Find the local lettuce",
+    "desc": "Check the database diagram for a table that has data on items. You can either use the id from the previous query as a filter, or directly filter on the item itself.",
+    "sol": "select * \nfrom game.item\nwhere person_id = <id from the greengrocer query>;\n-- or\nselect * \nfrom game.item\nwhere item = 'local lettuce'"
+  },
+  {
+    "id": 3,
+    "title": "Add the item to your inventory",
+    "desc": "Execute the function to add items to your inventory",
+    "sol": "select game.add_to_inventory(<id from the item query>);"
+  },
+  {
+    "id": 4,
+    "title": "Find the saltmine",
+    "desc": "Check the database diagram for a table that has data on locations. You can filter on the village that you are currently in. Remember the id, you will need it for the solution.",
+    "sol": "select *\nfrom game.location_overview\nwhere village = 'Aintree';"
+  },
+  {
+    "id": 5,
+    "title": "Find the monster with local lettuce as weakness",
+    "desc":"Check the database diagram for a table that has data on monsters.",
+    "sol": "select *\nfrom game.monster\nwhere weakness = 'local lettuce'"
+  },
+  {
+    "id": 6,
+    "title": "Find the kill strategy",
+    "desc": "Check the database diagram for a table that has data on kill strategies.",
+    "sol": "select *\nfrom game.kill_strategy;"
+  },
+  {
+    "id": 7,
+    "title": "Use the ids for location, monster and kill strategy to check the solution",
+    "desc": "Execute the function to check the solution.",
+    "sol": "select game.check_solution(p_loc_id => <id from saltmine query>, p_mnstr_id => <id from monster query>, p_strat_id => <id from strategy query> )"
+  }
+]
