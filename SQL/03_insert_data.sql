@@ -41,7 +41,7 @@ COPY game.item (id, person_id, item, explanation, bonus_flag) FROM stdin;
 106	20	gherkin	Pickled baby cucumber.	N
 107	20	pickles	Pickled cucumber.	N
 118	20	relish	A piquant sauce or pickle eaten with plain food to add flavour.	N
-117	4	whoopsie-daisiy	Accidental sacred flower for the goddess of love, beauty and fertility	N
+117	4	whoopsie-daisy	Accidental sacred flower for the goddess of love, beauty and fertility	N
 115	18	mocha	Mixture of coffee and chocolate	N
 116	18	chai	Blend of black tea, honey, spices and milk. Can also be used as the word for life.	N
 119	18	espresso	The perfect balance between acidity, bitterness and sweetness	N
@@ -60,7 +60,7 @@ COPY game.item (id, person_id, item, explanation, bonus_flag) FROM stdin;
 212	\N	helm of courage	You can do it!	Y
 213	\N	shield of ubiquity	When you raise this shield it seems to form all around you. Nothing or no one can harm you.	Y
 13	\N	map	Intriguing piece of paper adorned with a mysterious -X-	N
-120	27	earplugs	\N	N
+120	27	earplugs	A piece of wax, rubber, or cotton wool placed in the ear as protection against noise, water, or cold air.	N
 108	5	lute (40)	Stringed instrument, the name is derived from the Arabic "el lud", meaning "the wood".	N
 109	5	harp (78)	Stringed instrument.	N
 110	5	drum (115)	Percussion instrument, can accompany many different types of songs. Also used to send messages.	N
@@ -68,6 +68,7 @@ COPY game.item (id, person_id, item, explanation, bonus_flag) FROM stdin;
 112	5	cajón (108)	Percussion instrument, mostly used to accompany flamenco dancers.	N
 113	5	zither (100)	Stringed instrument.	N
 114	5	balalaika (85)	Stringed instrument.	N
+121	4	jasmine	Gift from God, symbolises purity, simplicity, modesty and strength	N
 \.
 
 
