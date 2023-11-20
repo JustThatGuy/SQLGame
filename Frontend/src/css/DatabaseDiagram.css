@@ -14,6 +14,7 @@
     background-color: var(--c-red);
     border: none;
     border-radius: 8px 8px 0 0;
+    box-shadow: 0px -4px 6px 0px var(--c-shadow);
     color: var(--c-secondarybg);
     display: flex;
     font-size: var(--fs-p);
@@ -28,6 +29,7 @@
 .DiagramArea {
     background-color: var(--c-secondarybg);
     border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 6px 0 var(--c-shadow);
     height: 100%;
     padding: 16px;
     width: 100%;

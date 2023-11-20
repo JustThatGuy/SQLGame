@@ -68,6 +68,7 @@ export default function App() {
                 </div>
 
                 {questInfo[0]}
+
             </div>
 
             <DatabaseDiagram />

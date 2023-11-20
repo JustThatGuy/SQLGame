@@ -39,7 +39,7 @@
 
 .TabPane {
   background-color: var(--c-secondarybg);
-  border-radius: var(--b-rad);
+  border-radius: 0 0 var(--b-rad) var(--b-rad);
   display: block;
   overflow: hidden;
   box-shadow: 1px 1px 5px var(--c-shadow) inset;
@@ -51,6 +51,7 @@
   border-radius: var(--b-rad);
   border: 1px solid var(--c-primary);
   margin: 3% auto;
+  overflow: hidden;
 }
 
 .Map {
