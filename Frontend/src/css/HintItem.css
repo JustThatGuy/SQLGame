@@ -68,7 +68,7 @@
   vertical-align: middle;
   float: right;
   max-width: 5%;
-  margin: 0 0;
+  margin-right: var(--m-1x);
 }
 
 .HintSolView:hover {

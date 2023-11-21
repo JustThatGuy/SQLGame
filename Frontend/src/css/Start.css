@@ -37,7 +37,10 @@
 }
 
 .StartGameButton {
-    background: none;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
     border: 1px solid var(--c-primary);
     border-radius: 64px;
     color: var(--c-secondary);
@@ -49,6 +52,6 @@
 
 .StartGameButton:hover {
     background: var(--c-secondary);
-    color: var(--c-action);
+    color: var(--c-action-h);
     font-size: var(--fs-quest);
 }

@@ -7,11 +7,10 @@ table {
 }
 
 th {
-    height: 3vh;
     border-right: 1px solid var(--c-secondary);
     border-bottom: 1px solid var(--c-secondary);
     font-weight: 700;
-    padding: 16px 8px;
+    padding: var(--p-1-5x) var(--p-1x);
     text-align: left;
     text-transform: capitalize;
 }

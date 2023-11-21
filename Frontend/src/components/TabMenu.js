@@ -8,7 +8,7 @@ import InventoryItem from './InventoryItem';
 import hints from "../data/hints.json"
 import HintItem from './HintItem';
 
-export default () => {
+export default function TabMenu() {
   // inventory request funtion
   const [inventory, setInventory] = useState([]);
 

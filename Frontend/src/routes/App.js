@@ -1,12 +1,12 @@
 import '../css/App.css';
 
 import { useState, useEffect } from "react"
+import { backenduri } from '..';
 import TabMenu from '../components/TabMenu';
 import Table from '../components/Table';
 import data from "../data/data.json"
 import DatabaseDiagram from '../components/DatabaseDiagram';
 import { questInfo } from "../components/QuestInfo"
-import { backenduri } from '..';
 
 export default function App() {
 
@@ -56,7 +56,7 @@ export default function App() {
                             <label className="FieldLabel">SQL Query</label>
                             <button id="Execute" className="ExecuteButton" onClick={execQuery}>Execute ►</button>
                         </div>
-                        <textarea id="SQLQueryField"></textarea>
+                        <textarea id="SQLQueryField" placeholder='Enter SQL Query'></textarea>
                     </div>
 
                     <div className="ResultDisplay">

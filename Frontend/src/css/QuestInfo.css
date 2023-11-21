@@ -1,0 +1,66 @@
+/* Quest background info */
+.QuestCell {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    padding: 0;
+    grid-row-gap: 16px;
+    justify-content: start;
+    display: grid;
+}
+
+.QuestIntroCell {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.LevelHeader {
+    font-size: var(--fs-h2);
+    margin: 0 0 var(--m-1x) 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.LevelContext {
+    margin: 0 0 10px 0;
+    padding: 0;
+    white-space: pre-wrap;
+}
+
+.NewQuestCell {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--c-secondarybg);
+}
+
+.NewQuest {
+    background-image: linear-gradient(45deg, var(--c-secondary), var(--c-primary));
+    border-left: 5px solid var(--c-action-h);
+    border-radius: var(--b-rad);
+    box-shadow: 0 4px 10px var(--c-shadow);
+    margin: 0 0 var(--m-1-5x) 0;
+    padding: var(--p-1x) var(--p-2x);
+    width: 100%;
+}
+
+.BoldText {
+    font-size: var(--fs-pl);
+    font-weight: bold;
+}
+
+.QuestDetails {
+    margin: -12px 0 0 0;
+    padding: 0 0 0 var(--p-1x);
+    border-radius: var(--b-rad);
+}
+
+.QuestText {
+    box-shadow: none;
+    color: var(--c-secondary);
+    border-left: 2px solid var(--c-secondary);
+    margin: 0 auto 0 auto;
+    padding: var(--p-1x) var(--p-1x);
+}
