@@ -1,10 +1,8 @@
 /* Quest background info */
 .QuestCell {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto;
     padding: 0;
     grid-row-gap: 16px;
-    justify-content: start;
     display: grid;
 }
 
@@ -26,6 +24,7 @@
     margin: 0 0 10px 0;
     padding: 0;
     white-space: pre-wrap;
+    font-size: 95%;
 }
 
 .NewQuestCell {
@@ -42,7 +41,7 @@
     border-radius: var(--b-rad);
     box-shadow: 0 4px 10px var(--c-shadow);
     margin: 0 0 var(--m-1-5x) 0;
-    padding: var(--p-1x) var(--p-2x);
+    padding: var(--p-1-5x) var(--p-2x);
     width: 100%;
 }
 
@@ -55,6 +54,7 @@
     margin: -12px 0 0 0;
     padding: 0 0 0 var(--p-1x);
     border-radius: var(--b-rad);
+    font-size: 95%;
 }
 
 .QuestText {

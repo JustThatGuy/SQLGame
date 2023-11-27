@@ -77,3 +77,15 @@ ul {
   'opsz' 24;
   color: var(--c-primary);
 }
+
+@media screen and (max-width: 1920px) {
+  :root {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  :root {
+    font-size: 80%;
+  }
+}

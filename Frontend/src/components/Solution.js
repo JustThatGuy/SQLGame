@@ -2,6 +2,10 @@ import '../css/Solution.css'
 
 export default function Solution() {
 
+    const SubmitSolution = async() => {
+        
+    }
+
     return (
         <div className='Solution'>
             <h2>Solution</h2>
@@ -17,7 +21,7 @@ export default function Solution() {
                 <label className='SolutionLabel'>Kill Strategy</label>
                 <input className='SolutionField' placeholder='Kill Strategy ID'></input>
             </div>
-            <button className='SubmitButton'>Submit</button>
+            <button className='SubmitButton' onClick={SubmitSolution}>Submit</button>
         </div>
     )
 };

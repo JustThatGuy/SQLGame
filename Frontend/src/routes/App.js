@@ -11,6 +11,7 @@ import { questInfo } from "../components/QuestInfo"
 export default function App() {
 
     const [queryResult, setQueryResult] = useState(data)
+    const [errorState, setErrorState] = useState()
 
     // parse query to backend
     const execQuery = async () => {
@@ -30,9 +31,9 @@ export default function App() {
                 var result = await res.json();
                 setQueryResult(result);
             } else {
-                var error = await res.text();
-                useEffect(() => { document.getElementById("ResultArea").innerText = error });
-                //document.getElementById("ResultArea").innerText = await res.text();
+                var errorContainer = document.getElementById("errorMsg");
+                errorContainer.innerText = await res.text();
+                // Create errorState logic here
             }
 
         } else {
@@ -62,6 +63,9 @@ export default function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
+                            <div id='errorPopup'>
+                                <p id='errorMsg'>Placeholder Error</p>
+                            </div>
                             <Table data={queryResult} />
                         </div>
                     </div>
