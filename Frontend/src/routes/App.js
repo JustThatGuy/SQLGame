@@ -44,7 +44,9 @@ export default function App() {
             }
 
         } else {
-            document.getElementById("ResultArea").innerText = "You should enter a query in the SQL Query field...";
+            errorContainer.innerText = "You should enter a query in the SQL Query field...";
+            errorContainer.style = "display:block";
+            table.style = "display:none";
         }
     };
 
