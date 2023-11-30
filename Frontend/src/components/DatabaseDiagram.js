@@ -14,7 +14,7 @@ export default () => {
     }
 
     return (
-    <div className='DatabaseDiagramDrawer' id="DiagramDrawer">
+    <div className='DatabaseDiagramDrawer' id="DiagramDrawer" style={{height: 0 + "%"}}>
         <button className='DrawerButton' onClick={toggleDiagram}>Database</button>
         <div className='DiagramArea'>
             <Draggable>
