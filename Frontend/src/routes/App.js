@@ -15,7 +15,11 @@ export default function App() {
 
     // parse query to backend
     const execQuery = async () => {
+        var errorContainer = document.getElementById("errorPopup");
+        var table = document.getElementById("resultTable")
+
         const query = document.getElementById("SQLQueryField").value;
+
         if (query) {
             const res = await fetch(`${backenduri}/query`, {
                 method: 'POST',
@@ -30,10 +34,13 @@ export default function App() {
             if (res.ok) {
                 var result = await res.json();
                 setQueryResult(result);
+                errorContainer.style = "display:none";
+                table.style = "display:block";
+                
             } else {
-                var errorContainer = document.getElementById("errorMsg");
                 errorContainer.innerText = await res.text();
-                // Create errorState logic here
+                errorContainer.style = "display:block";
+                table.style = "display:none";
             }
 
         } else {
@@ -63,7 +70,7 @@ export default function App() {
                     <div className="ResultDisplay">
                         <label className="DisplayLabel">Result</label>
                         <div className="Result" id="ResultArea">
-                            <div id='errorPopup'>
+                            <div id='errorPopup' style={{display: "none"}}>
                                 <p id='errorMsg'>Placeholder Error</p>
                             </div>
                             <Table data={queryResult} />

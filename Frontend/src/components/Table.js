@@ -7,7 +7,7 @@ export class Table extends Component {
     const {data} = this.props;
     const columns = Object.keys(data[0]);
     return (
-      <table>
+      <table id="resultTable">
         <thead>
           <TableHead columns={columns} />
         </thead>

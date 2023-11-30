@@ -85,6 +85,7 @@
 
 .ResultDisplay {
   height: 42vh;
+  overflow: hidden;
 }
 
 .DisplayLabel {
@@ -104,6 +105,7 @@
   font-size: var(--fs-p);
   height: 92%;
   padding: 8px;
+  overflow: hidden;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
