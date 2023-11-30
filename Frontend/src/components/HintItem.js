@@ -21,7 +21,7 @@ export default function HintItem({ hint }) {
     <Collapsible containerElementProps={hint.id} trigger={hint.title} transitionTime={100} easing='ease' contentHiddenWhenClosed='true'>
       <p className='HintDesc'>{hint.desc}</p>
       <div className='HintSol'>{text}
-        <p className="HintSolText" style={show?{display:"inline-block"}:{display:'none'}}>{hint.sol}</p>
+        <p className="HintSolText" style={show ? {display:"inline-block"} : {display:'none'}}>{hint.sol}</p>
         <span id='HintIcon' className="material-symbols-rounded HintSolView" onClick={toggleSolution}>{icon}</span>
       </div>
     </Collapsible>

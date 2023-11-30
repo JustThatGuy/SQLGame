@@ -10,11 +10,11 @@ import { questInfo } from "../components/QuestInfo"
 
 export default function App() {
 
-    const [queryResult, setQueryResult] = useState(data)
-    const [errorState, setErrorState] = useState()
+    const [queryResult, setQueryResult] = useState(data);
 
     // parse query to backend
     const execQuery = async () => {
+
         var errorContainer = document.getElementById("errorPopup");
         var table = document.getElementById("resultTable")
 
@@ -36,7 +36,6 @@ export default function App() {
                 setQueryResult(result);
                 errorContainer.style = "display:none";
                 table.style = "display:block";
-                
             } else {
                 errorContainer.innerText = await res.text();
                 errorContainer.style = "display:block";
@@ -49,8 +48,6 @@ export default function App() {
             table.style = "display:none";
         }
     };
-
-
 
     // Build the screen
     return (
